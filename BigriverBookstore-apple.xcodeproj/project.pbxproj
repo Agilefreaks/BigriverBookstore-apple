@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		27DE6409222D42E600200462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE6408222D42E600200462 /* AppDelegate.swift */; };
-		27DE640B222D42E600200462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE640A222D42E600200462 /* ViewController.swift */; };
 		27DE640D222D42E700200462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640C222D42E700200462 /* Assets.xcassets */; };
 		27DE6410222D42E700200462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640E222D42E700200462 /* Main.storyboard */; };
 		27DE641C222D42E700200462 /* BigriverBookstore_appleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE641B222D42E700200462 /* BigriverBookstore_appleTests.swift */; };
+		27DE642C222D449600200462 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE642B222D449600200462 /* Book.swift */; };
+		27DE642E222D44AA00200462 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE642D222D44AA00200462 /* Author.swift */; };
+		27DE6430222D456500200462 /* LibraryBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE642F222D456500200462 /* LibraryBooksController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +29,6 @@
 /* Begin PBXFileReference section */
 		27DE6405222D42E600200462 /* BigriverBookstore-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BigriverBookstore-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DE6408222D42E600200462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27DE640A222D42E600200462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27DE640C222D42E700200462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27DE640F222D42E700200462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27DE6411222D42E700200462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +36,9 @@
 		27DE6417222D42E700200462 /* BigriverBookstore-appleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BigriverBookstore-appleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DE641B222D42E700200462 /* BigriverBookstore_appleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigriverBookstore_appleTests.swift; sourceTree = "<group>"; };
 		27DE641D222D42E700200462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27DE642B222D449600200462 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		27DE642D222D44AA00200462 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		27DE642F222D456500200462 /* LibraryBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBooksController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +80,14 @@
 		27DE6407222D42E600200462 /* BigriverBookstore-apple */ = {
 			isa = PBXGroup;
 			children = (
-				27DE6408222D42E600200462 /* AppDelegate.swift */,
-				27DE640A222D42E600200462 /* ViewController.swift */,
-				27DE640C222D42E700200462 /* Assets.xcassets */,
 				27DE640E222D42E700200462 /* Main.storyboard */,
-				27DE6411222D42E700200462 /* Info.plist */,
+				27DE6408222D42E600200462 /* AppDelegate.swift */,
+				27DE6429222D444B00200462 /* Controller */,
+				27DE6428222D443A00200462 /* View */,
+				27DE6427222D442F00200462 /* Model */,
+				27DE6426222D438C00200462 /* Resourses & Assets */,
 				27DE6412222D42E700200462 /* BigriverBookstore_apple.entitlements */,
+				27DE6411222D42E700200462 /* Info.plist */,
 			);
 			path = "BigriverBookstore-apple";
 			sourceTree = "<group>";
@@ -93,6 +99,46 @@
 				27DE641D222D42E700200462 /* Info.plist */,
 			);
 			path = "BigriverBookstore-appleTests";
+			sourceTree = "<group>";
+		};
+		27DE6426222D438C00200462 /* Resourses & Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27DE640C222D42E700200462 /* Assets.xcassets */,
+			);
+			path = "Resourses & Assets";
+			sourceTree = "<group>";
+		};
+		27DE6427222D442F00200462 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27DE642B222D449600200462 /* Book.swift */,
+				27DE642D222D44AA00200462 /* Author.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27DE6428222D443A00200462 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27DE642A222D446200200462 /* BookItem */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27DE6429222D444B00200462 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27DE642F222D456500200462 /* LibraryBooksController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27DE642A222D446200200462 /* BookItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27DE640B222D42E600200462 /* ViewController.swift in Sources */,
+				27DE642E222D44AA00200462 /* Author.swift in Sources */,
+				27DE642C222D449600200462 /* Book.swift in Sources */,
+				27DE6430222D456500200462 /* LibraryBooksController.swift in Sources */,
 				27DE6409222D42E600200462 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
