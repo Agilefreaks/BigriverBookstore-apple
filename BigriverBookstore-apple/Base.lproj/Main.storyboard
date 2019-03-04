@@ -701,10 +701,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Library Books Controller-->
         <scene sceneID="zg5-Bj-dao">
             <objects>
-                <viewController id="dnN-uf-GMa" sceneMemberID="viewController">
+                <viewController id="dnN-uf-GMa" customClass="LibraryBooksController" customModule="BigriverBookstore_apple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="NTB-b1-Fn0">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>

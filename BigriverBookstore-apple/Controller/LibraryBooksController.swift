@@ -12,7 +12,18 @@ class LibraryBooksController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        printListWithBooks()
     }
     
+    
+    private func printListWithBooks() {
+        //Retrieve a list with all books
+        APIConexion.retrieveBookList { (bookList) in
+            bookList.forEach({ (book) in
+                print(book.title ?? "No title")
+                print(book.isbn ?? 0)
+                print("---")
+            })
+        }
+    }
 }

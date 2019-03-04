@@ -6,4 +6,23 @@
 //  Copyright © 2019 AgileFreaks. All rights reserved.
 //
 
-import Foundation
+import Spine
+
+class Book:Resource {
+    
+    var title:String?
+//    var datePublished:Date?
+    var isbn:NSNumber?
+    
+    override class var resourceType: ResourceType {
+        return "books"
+    }
+    
+    override class var fields: [Field] {
+        return fieldsFromDictionary([
+            "title": Attribute(),
+            "isbn":Attribute()
+            ])
+    }
+    
+}

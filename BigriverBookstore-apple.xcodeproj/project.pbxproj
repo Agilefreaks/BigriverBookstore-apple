@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A934CC222D5E2C00F8327D /* APIConexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A934CB222D5E2C00F8327D /* APIConexion.swift */; };
+		27A934CE222D700F00F8327D /* APIConexionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A934CD222D700F00F8327D /* APIConexionTest.swift */; };
 		27DE6409222D42E600200462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE6408222D42E600200462 /* AppDelegate.swift */; };
 		27DE640D222D42E700200462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640C222D42E700200462 /* Assets.xcassets */; };
 		27DE6410222D42E700200462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640E222D42E700200462 /* Main.storyboard */; };
@@ -14,6 +16,8 @@
 		27DE642C222D449600200462 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE642B222D449600200462 /* Book.swift */; };
 		27DE642E222D44AA00200462 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE642D222D44AA00200462 /* Author.swift */; };
 		27DE6430222D456500200462 /* LibraryBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE642F222D456500200462 /* LibraryBooksController.swift */; };
+		6655BA1FC27BF1E5C9BF1D59 /* Pods_BigriverBookstore_appleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CC73F1472600DA0F4ABC5 /* Pods_BigriverBookstore_appleTests.framework */; };
+		A5234C21ED76FBA59296E0CA /* Pods_BigriverBookstore_apple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEB6E4034256770B687EF21 /* Pods_BigriverBookstore_apple.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14281BB33C308A368327910C /* Pods-BigriverBookstore-appleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigriverBookstore-appleTests.debug.xcconfig"; path = "Target Support Files/Pods-BigriverBookstore-appleTests/Pods-BigriverBookstore-appleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		27A934CB222D5E2C00F8327D /* APIConexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConexion.swift; sourceTree = "<group>"; };
+		27A934CD222D700F00F8327D /* APIConexionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConexionTest.swift; sourceTree = "<group>"; };
 		27DE6405222D42E600200462 /* BigriverBookstore-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BigriverBookstore-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DE6408222D42E600200462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DE640C222D42E700200462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +46,11 @@
 		27DE642B222D449600200462 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		27DE642D222D44AA00200462 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		27DE642F222D456500200462 /* LibraryBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBooksController.swift; sourceTree = "<group>"; };
+		509CC73F1472600DA0F4ABC5 /* Pods_BigriverBookstore_appleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigriverBookstore_appleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DEB6E4034256770B687EF21 /* Pods_BigriverBookstore_apple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigriverBookstore_apple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A837BE653D2B38302B6A5252 /* Pods-BigriverBookstore-apple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigriverBookstore-apple.release.xcconfig"; path = "Target Support Files/Pods-BigriverBookstore-apple/Pods-BigriverBookstore-apple.release.xcconfig"; sourceTree = "<group>"; };
+		B45692865CD06373FDBE5A17 /* Pods-BigriverBookstore-apple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigriverBookstore-apple.debug.xcconfig"; path = "Target Support Files/Pods-BigriverBookstore-apple/Pods-BigriverBookstore-apple.debug.xcconfig"; sourceTree = "<group>"; };
+		B59E94A841D89A5D59F6F1E7 /* Pods-BigriverBookstore-appleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigriverBookstore-appleTests.release.xcconfig"; path = "Target Support Files/Pods-BigriverBookstore-appleTests/Pods-BigriverBookstore-appleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5234C21ED76FBA59296E0CA /* Pods_BigriverBookstore_apple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6655BA1FC27BF1E5C9BF1D59 /* Pods_BigriverBookstore_appleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +79,8 @@
 				27DE6407222D42E600200462 /* BigriverBookstore-apple */,
 				27DE641A222D42E700200462 /* BigriverBookstore-appleTests */,
 				27DE6406222D42E600200462 /* Products */,
+				837190B81C6751515B48F936 /* Pods */,
+				2D37C5CD410DF24267724965 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				27DE641B222D42E700200462 /* BigriverBookstore_appleTests.swift */,
+				27A934CD222D700F00F8327D /* APIConexionTest.swift */,
 				27DE641D222D42E700200462 /* Info.plist */,
 			);
 			path = "BigriverBookstore-appleTests";
@@ -114,6 +131,7 @@
 			children = (
 				27DE642B222D449600200462 /* Book.swift */,
 				27DE642D222D44AA00200462 /* Author.swift */,
+				27A934CB222D5E2C00F8327D /* APIConexion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +159,26 @@
 			path = BookItem;
 			sourceTree = "<group>";
 		};
+		2D37C5CD410DF24267724965 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DEB6E4034256770B687EF21 /* Pods_BigriverBookstore_apple.framework */,
+				509CC73F1472600DA0F4ABC5 /* Pods_BigriverBookstore_appleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		837190B81C6751515B48F936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B45692865CD06373FDBE5A17 /* Pods-BigriverBookstore-apple.debug.xcconfig */,
+				A837BE653D2B38302B6A5252 /* Pods-BigriverBookstore-apple.release.xcconfig */,
+				14281BB33C308A368327910C /* Pods-BigriverBookstore-appleTests.debug.xcconfig */,
+				B59E94A841D89A5D59F6F1E7 /* Pods-BigriverBookstore-appleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27DE6420222D42E700200462 /* Build configuration list for PBXNativeTarget "BigriverBookstore-apple" */;
 			buildPhases = (
+				19E9A1F2BC34BB7082A2D1A6 /* [CP] Check Pods Manifest.lock */,
 				27DE6401222D42E600200462 /* Sources */,
 				27DE6402222D42E600200462 /* Frameworks */,
 				27DE6403222D42E600200462 /* Resources */,
+				A572272FF4F4A0DEEABD22DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27DE6423222D42E700200462 /* Build configuration list for PBXNativeTarget "BigriverBookstore-appleTests" */;
 			buildPhases = (
+				AF674EDECCFB373808EFE949 /* [CP] Check Pods Manifest.lock */,
 				27DE6413222D42E700200462 /* Sources */,
 				27DE6414222D42E700200462 /* Frameworks */,
 				27DE6415222D42E700200462 /* Resources */,
@@ -236,11 +277,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19E9A1F2BC34BB7082A2D1A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BigriverBookstore-apple-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A572272FF4F4A0DEEABD22DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BigriverBookstore-apple/Pods-BigriverBookstore-apple-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Spine/Spine.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BigriverBookstore-apple/Pods-BigriverBookstore-apple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF674EDECCFB373808EFE949 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BigriverBookstore-appleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27DE6401222D42E600200462 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A934CC222D5E2C00F8327D /* APIConexion.swift in Sources */,
 				27DE642E222D44AA00200462 /* Author.swift in Sources */,
 				27DE642C222D449600200462 /* Book.swift in Sources */,
 				27DE6430222D456500200462 /* LibraryBooksController.swift in Sources */,
@@ -253,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DE641C222D42E700200462 /* BigriverBookstore_appleTests.swift in Sources */,
+				27A934CE222D700F00F8327D /* APIConexionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +513,7 @@
 		};
 		27DE6421222D42E700200462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45692865CD06373FDBE5A17 /* Pods-BigriverBookstore-apple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BigriverBookstore-apple/BigriverBookstore_apple.entitlements";
@@ -413,6 +532,7 @@
 		};
 		27DE6422222D42E700200462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A837BE653D2B38302B6A5252 /* Pods-BigriverBookstore-apple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BigriverBookstore-apple/BigriverBookstore_apple.entitlements";
@@ -431,6 +551,7 @@
 		};
 		27DE6424222D42E700200462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14281BB33C308A368327910C /* Pods-BigriverBookstore-appleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -451,6 +572,7 @@
 		};
 		27DE6425222D42E700200462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59E94A841D89A5D59F6F1E7 /* Pods-BigriverBookstore-appleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
