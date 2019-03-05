@@ -19,13 +19,7 @@ class APIConnexion: APIService {
 
         spine.find(booksQuery).onSuccess { arg0 in
             let (resources, _, _) = arg0
-            var books = [Book]()
-            resources.forEach({ res in
-                if let currentBook = res as? Book {
-                    books.append(currentBook)
-                }
-            })
-            completionHandler?(books)
+            completionHandler?(resources.compactMap({$0 as? Book}))
         }
     }
 }
