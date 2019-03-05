@@ -705,14 +705,14 @@
         <scene sceneID="zg5-Bj-dao">
             <objects>
                 <viewController id="dnN-uf-GMa" customClass="LibraryBooksController" customModule="BigriverBookstore_apple" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="NTB-b1-Fn0">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                    <view key="view" identifier="libraryBooksController" id="NTB-b1-Fn0">
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="458"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
                 <customObject id="QTe-3s-N4h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="686"/>
+            <point key="canvasLocation" x="76" y="813"/>
         </scene>
     </scenes>
 </document>
