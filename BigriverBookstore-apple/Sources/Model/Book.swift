@@ -11,6 +11,7 @@ import Spine
 class Book: Resource {
     var title: String?
     var isbn: NSNumber?
+    var author:Author?
 
     override class var resourceType: ResourceType {
         return "books"
@@ -20,6 +21,7 @@ class Book: Resource {
         return fieldsFromDictionary([
             "title": Attribute(),
             "isbn": Attribute(),
+            "author":ToOneRelationship.init(Author.self)
         ])
     }
 }
