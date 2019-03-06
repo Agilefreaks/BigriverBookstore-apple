@@ -7,19 +7,17 @@
 //
 
 import Foundation
-import Spine
 
-class Author: Resource {
+class Author {
     
-    var name: String?
+    var name: String
     
-    override class var resourceType: ResourceType {
-        return "authors"
+    init(with name:String) {
+        self.name = name
     }
     
-    override class var fields: [Field] {
-        return fieldsFromDictionary([
-            "name": Attribute()
-            ])
+    convenience init(jsonAuthor:AuthorJSON?) {
+        let name = jsonAuthor?.name ?? ""
+        self.init(with: name)
     }
 }

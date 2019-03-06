@@ -8,20 +8,21 @@
 
 import Spine
 
-class Book: Resource {
-    var title: String?
-    var isbn: NSNumber?
-    var author:Author?
+class Book {
+    var title: String
+    var author: Author
+    var photos: [Photo]
 
-    override class var resourceType: ResourceType {
-        return "books"
+    init(with title: String, author: Author, photos: [Photo]) {
+        self.title = title
+        self.author = author
+        self.photos = photos
     }
 
-    override class var fields: [Field] {
-        return fieldsFromDictionary([
-            "title": Attribute(),
-            "isbn": Attribute(),
-            "author":ToOneRelationship.init(Author.self)
-        ])
+    convenience init(jsonBook: BookJSON?) {
+        let bookTitle = jsonBook?.title ?? ""
+        let bookAuthor = Author(jsonAuthor: jsonBook?.author)
+        let photos = jsonBook?.photos?.resources.compactMap({ ( Photo.init(jsonPhoto: $0 as? PhotoJSON)) }) ?? [Photo]()
+        self.init(with: bookTitle, author: bookAuthor, photos: photos)
     }
 }
