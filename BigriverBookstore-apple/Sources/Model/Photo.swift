@@ -11,16 +11,16 @@ import Spine
 
 class Photo {
     var title: String
-    var url:URL
-    
-    init(with title:String, url:URL) {
+    var url: URL
+
+    init(with title: String, url: URL) {
         self.title = title
         self.url = url
     }
-    
-    convenience init(jsonPhoto:PhotoJSON?) {
+
+    convenience init(jsonPhoto: PhotoJSON?) {
         let title = jsonPhoto?.title ?? ""
-        let url = jsonPhoto?.url ?? URL.init(string: "www.nil.com")!
+        let url = jsonPhoto?.url ?? URL(string: "www.nil.com")!
         self.init(with: title, url: url)
     }
 }

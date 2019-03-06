@@ -24,6 +24,4 @@ class PhotoTests: XCTestCase {
         XCTAssertEqual(photo!.title, "Image title")
         XCTAssertEqual(photo!.url.absoluteString, "http://image.com")
     }
-
-  
 }

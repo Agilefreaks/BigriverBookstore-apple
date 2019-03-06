@@ -20,7 +20,7 @@ class APIJSONConnexion: APIService {
     func retrieveBookList(completionHandler: (([Book]) -> Void)?) {
         _ = registerResources
         var booksQuery = Query(resourceType: BookJSON.self, path: NetworkingConstants.booksPath)
-        booksQuery.paginate(PageBasedPagination(pageNumber: 1, pageSize: 200))
+        booksQuery.paginate(PageBasedPagination(pageNumber: 1, pageSize: 45))
         booksQuery.include("author")
         booksQuery.include("photos")
 

@@ -8,9 +8,8 @@
 @testable import BigriverBookstore_apple
 import Foundation
 
-class APIServiceTests:APIService {
+class APIServiceTests: APIService {
     func retrieveBookList(completionHandler: (([Book]) -> Void)?) {
-        completionHandler?([Book.init()])
+        completionHandler?([Book(with: "Book title", author: Author(with: "Book author"), photos: [])])
     }
-    
 }

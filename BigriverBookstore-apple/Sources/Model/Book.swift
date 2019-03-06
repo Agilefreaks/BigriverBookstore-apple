@@ -22,7 +22,7 @@ class Book {
     convenience init(jsonBook: BookJSON?) {
         let bookTitle = jsonBook?.title ?? ""
         let bookAuthor = Author(jsonAuthor: jsonBook?.author)
-        let photos = jsonBook?.photos?.resources.compactMap({ ( Photo.init(jsonPhoto: $0 as? PhotoJSON)) }) ?? [Photo]()
+        let photos = jsonBook?.photos?.resources.compactMap({ (Photo(jsonPhoto: $0 as? PhotoJSON)) }) ?? [Photo]()
         self.init(with: bookTitle, author: bookAuthor, photos: photos)
     }
 }

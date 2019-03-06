@@ -9,6 +9,26 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>BigriverBookstore-appleTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>27DE6404222D42E600200462</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27DE6416222D42E700200462</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

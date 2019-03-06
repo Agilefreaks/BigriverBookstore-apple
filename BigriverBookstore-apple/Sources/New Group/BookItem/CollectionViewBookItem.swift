@@ -12,35 +12,27 @@ class CollectionViewBookItem: NSCollectionViewItem {
     @IBOutlet var bookTitleTextField: NSTextField!
     @IBOutlet var authorNameTextField: NSTextField!
     @IBOutlet var bookCoverImageView: NSImageView!
-    
+
     var bookInfo: Book? {
         didSet {
             if let book = bookInfo {
-                bookTitleTextField.stringValue = book.title ?? "No title"
-                authorNameTextField.stringValue = book.author?.name ?? "No name"
-                
-                guard let photoCollection = bookInfo?.photos, photoCollection.count > 0, let imageURL = (bookInfo?.photos?[0] as? Photo?)??.uri else {
-                    return
+                bookTitleTextField.stringValue = book.title
+                bookTitleTextField.toolTip = bookTitleTextField.stringValue
+                authorNameTextField.stringValue = book.author.name
+                authorNameTextField.toolTip = authorNameTextField.stringValue
+                if !book.photos.isEmpty {
+                    loadImage(from: book.photos[0].url)
                 }
-                loadImage(from: imageURL)
             }
         }
     }
-    
-    private func loadImage(from url: URL) {
 
+    private func loadImage(from url: URL) {
         DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url) // make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-            if let data = data {
-                DispatchQueue.main.async {
-                    self.bookCoverImageView.image = NSImage(data: data)
-                }
+            let imageData = try? Data(contentsOf: url)
+            if let imageData = imageData {
+                DispatchQueue.main.async { self.bookCoverImageView.image = NSImage(data: imageData) }
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
     }
 }

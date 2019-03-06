@@ -9,14 +9,13 @@
 import Foundation
 
 class Author {
-    
     var name: String
-    
-    init(with name:String) {
+
+    init(with name: String) {
         self.name = name
     }
-    
-    convenience init(jsonAuthor:AuthorJSON?) {
+
+    convenience init(jsonAuthor: AuthorJSON?) {
         let name = jsonAuthor?.name ?? ""
         self.init(with: name)
     }
