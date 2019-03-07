@@ -19,6 +19,7 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource {
             self.libraryBooksCollectionView.reloadData()
         }
         configureLibraryCollectionView()
+        
     }
     
     private func configureLibraryCollectionView() {

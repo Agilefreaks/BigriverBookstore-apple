@@ -22,6 +22,8 @@
 		27363600222FF70300E3D751 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273635FF222FF70300E3D751 /* BookTests.swift */; };
 		27363602222FFB6C00E3D751 /* AuthorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27363601222FFB6C00E3D751 /* AuthorTests.swift */; };
 		27363604222FFCE400E3D751 /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27363603222FFCE400E3D751 /* PhotoTests.swift */; };
+		274EB353223025B3005D66D6 /* BooksControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB352223025B3005D66D6 /* BooksControllerTests.swift */; };
+		274EB35B22302757005D66D6 /* BigriverBookstore_appleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB35A22302757005D66D6 /* BigriverBookstore_appleUITests.swift */; };
 		27A934CC222D5E2C00F8327D /* APIJSONConnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A934CB222D5E2C00F8327D /* APIJSONConnexion.swift */; };
 		27DE6409222D42E600200462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE6408222D42E600200462 /* AppDelegate.swift */; };
 		27DE640D222D42E700200462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640C222D42E700200462 /* Assets.xcassets */; };
@@ -33,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		274EB35D22302757005D66D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27DE63FD222D42E600200462 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27DE6404222D42E600200462;
+			remoteInfo = "BigriverBookstore-apple";
+		};
 		27DE6418222D42E700200462 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27DE63FD222D42E600200462 /* Project object */;
@@ -59,6 +68,10 @@
 		273635FF222FF70300E3D751 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		27363601222FFB6C00E3D751 /* AuthorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTests.swift; sourceTree = "<group>"; };
 		27363603222FFCE400E3D751 /* PhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTests.swift; sourceTree = "<group>"; };
+		274EB352223025B3005D66D6 /* BooksControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksControllerTests.swift; sourceTree = "<group>"; };
+		274EB35822302757005D66D6 /* BigriverBookstore-appleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BigriverBookstore-appleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		274EB35A22302757005D66D6 /* BigriverBookstore_appleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigriverBookstore_appleUITests.swift; sourceTree = "<group>"; };
+		274EB35C22302757005D66D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A934CB222D5E2C00F8327D /* APIJSONConnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJSONConnexion.swift; sourceTree = "<group>"; };
 		27DE6405222D42E600200462 /* BigriverBookstore-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BigriverBookstore-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DE6408222D42E600200462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +91,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		274EB35522302757005D66D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27DE6402222D42E600200462 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,11 +201,21 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		274EB35922302757005D66D6 /* BigriverBookstore-appleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				274EB35A22302757005D66D6 /* BigriverBookstore_appleUITests.swift */,
+				274EB35C22302757005D66D6 /* Info.plist */,
+			);
+			path = "BigriverBookstore-appleUITests";
+			sourceTree = "<group>";
+		};
 		27DE63FC222D42E600200462 = {
 			isa = PBXGroup;
 			children = (
 				27DE6407222D42E600200462 /* BigriverBookstore-apple */,
 				27DE641A222D42E700200462 /* BigriverBookstore-appleTests */,
+				274EB35922302757005D66D6 /* BigriverBookstore-appleUITests */,
 				27DE6406222D42E600200462 /* Products */,
 				837190B81C6751515B48F936 /* Pods */,
 				2D37C5CD410DF24267724965 /* Frameworks */,
@@ -197,6 +227,7 @@
 			children = (
 				27DE6405222D42E600200462 /* BigriverBookstore-apple.app */,
 				27DE6417222D42E700200462 /* BigriverBookstore-appleTests.xctest */,
+				274EB35822302757005D66D6 /* BigriverBookstore-appleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +251,7 @@
 				273635FE222FF6AF00E3D751 /* Model */,
 				273635D8222E81CF00E3D751 /* LibraryBooksViewModelTests.swift */,
 				273635DA222E825300E3D751 /* APIServiceTests.swift */,
+				274EB352223025B3005D66D6 /* BooksControllerTests.swift */,
 				27DE641D222D42E700200462 /* Info.plist */,
 			);
 			path = "BigriverBookstore-appleTests";
@@ -275,6 +307,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		274EB35722302757005D66D6 /* BigriverBookstore-appleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 274EB35F22302757005D66D6 /* Build configuration list for PBXNativeTarget "BigriverBookstore-appleUITests" */;
+			buildPhases = (
+				274EB35422302757005D66D6 /* Sources */,
+				274EB35522302757005D66D6 /* Frameworks */,
+				274EB35622302757005D66D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				274EB35E22302757005D66D6 /* PBXTargetDependency */,
+			);
+			name = "BigriverBookstore-appleUITests";
+			productName = "BigriverBookstore-appleUITests";
+			productReference = 274EB35822302757005D66D6 /* BigriverBookstore-appleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		27DE6404222D42E600200462 /* BigriverBookstore-apple */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27DE6420222D42E700200462 /* Build configuration list for PBXNativeTarget "BigriverBookstore-apple" */;
@@ -323,6 +373,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = AgileFreaks;
 				TargetAttributes = {
+					274EB35722302757005D66D6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 27DE6404222D42E600200462;
+					};
 					27DE6404222D42E600200462 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -347,11 +401,19 @@
 			targets = (
 				27DE6404222D42E600200462 /* BigriverBookstore-apple */,
 				27DE6416222D42E700200462 /* BigriverBookstore-appleTests */,
+				274EB35722302757005D66D6 /* BigriverBookstore-appleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		274EB35622302757005D66D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27DE6403222D42E600200462 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,6 +509,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		274EB35422302757005D66D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				274EB35B22302757005D66D6 /* BigriverBookstore_appleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27DE6401222D42E600200462 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274EB353223025B3005D66D6 /* BooksControllerTests.swift in Sources */,
 				27363600222FF70300E3D751 /* BookTests.swift in Sources */,
 				273635D9222E81CF00E3D751 /* LibraryBooksViewModelTests.swift in Sources */,
 				27363604222FFCE400E3D751 /* PhotoTests.swift in Sources */,
@@ -482,6 +553,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		274EB35E22302757005D66D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27DE6404222D42E600200462 /* BigriverBookstore-apple */;
+			targetProxy = 274EB35D22302757005D66D6 /* PBXContainerItemProxy */;
+		};
 		27DE6419222D42E700200462 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27DE6404222D42E600200462 /* BigriverBookstore-apple */;
@@ -501,6 +577,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		274EB36022302757005D66D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "BigriverBookstore-appleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agilefreaks.BigriverBookstore-appleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = "BigriverBookstore-apple";
+			};
+			name = Debug;
+		};
+		274EB36122302757005D66D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "BigriverBookstore-appleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.agilefreaks.BigriverBookstore-appleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = "BigriverBookstore-apple";
+			};
+			name = Release;
+		};
 		27DE641E222D42E700200462 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -699,6 +811,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		274EB35F22302757005D66D6 /* Build configuration list for PBXNativeTarget "BigriverBookstore-appleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				274EB36022302757005D66D6 /* Debug */,
+				274EB36122302757005D66D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27DE6400222D42E600200462 /* Build configuration list for PBXProject "BigriverBookstore-apple" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
