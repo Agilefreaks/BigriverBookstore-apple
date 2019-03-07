@@ -14,15 +14,13 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLibraryCollectionView()
         libraryBooks.loadBookList()
         libraryBooks.refreshData = {
             DispatchQueue.main.async {
                 self.libraryBooksCollectionView.reloadData()
             }
-            
         }
-        configureLibraryCollectionView()
-        
     }
     
     private func configureLibraryCollectionView() {
