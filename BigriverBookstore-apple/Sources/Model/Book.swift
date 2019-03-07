@@ -6,20 +6,26 @@
 //  Copyright © 2019 AgileFreaks. All rights reserved.
 //
 
-import Spine
 
-class Book: Resource {
-    var title: String?
-    var isbn: NSNumber?
+struct Book {
+    let title: String
+    let author: Author
+    let photos: [Photo]
 
-    override class var resourceType: ResourceType {
-        return "books"
+    init(with title: String, author: Author, photos: [Photo]) {
+        self.title = title
+        self.author = author
+        self.photos = photos
     }
 
-    override class var fields: [Field] {
-        return fieldsFromDictionary([
-            "title": Attribute(),
-            "isbn": Attribute(),
-        ])
+    init?(jsonBook: BookJSON?) {
+        guard let bookTitle = jsonBook?.title,
+            let bookAuthor = Author(jsonAuthor: jsonBook?.author),
+            let photos = jsonBook?.photos?.resources.compactMap({ (Photo(jsonPhoto: $0 as? PhotoJSON)) }) else {
+            return nil
+        }
+        self.title = bookTitle
+        self.author = bookAuthor
+        self.photos = photos
     }
 }

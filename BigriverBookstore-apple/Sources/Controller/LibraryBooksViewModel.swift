@@ -9,16 +9,13 @@
 import Foundation
 
 class LibraryBooksViewModel {
-    var currentBookList: [Book] = [] {
-        didSet {
-            printCurrentBookList()
-        }
-    }
+    var currentBookList: [Book] = []
+    
     var refreshData: (() -> Void)?
     
     private var apiService: APIService
     
-    init(with apiService: APIService = APIConnexion()) {
+    init(with apiService: APIService = APIJSONConnexion()) {
         self.apiService = apiService
     }
     
@@ -27,13 +24,5 @@ class LibraryBooksViewModel {
             self.currentBookList = bookList
             self.refreshData?()
         }
-    }
-    
-    private func printCurrentBookList() {
-        currentBookList.forEach({ book in
-            print("----------------")
-            print(book.title ?? "No title")
-            print(book.isbn ?? 0)
-        })
     }
 }

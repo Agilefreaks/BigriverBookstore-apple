@@ -1,0 +1,36 @@
+PODS:
+  - BrightFutures (7.0.0):
+    - Result (~> 4.0.0)
+  - Result (4.0.1)
+  - Spine (0.4):
+    - BrightFutures
+    - SwiftyJSON
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Spine (from `https://github.com/json-api-ios/Spine.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BrightFutures
+    - Result
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Spine:
+    :git: https://github.com/json-api-ios/Spine.git
+
+CHECKOUT OPTIONS:
+  Spine:
+    :commit: ee39d142fc3a8e3e643f6a3730ff8427947b4b18
+    :git: https://github.com/json-api-ios/Spine.git
+
+SPEC CHECKSUMS:
+  BrightFutures: 7d7436e937dfc83d814c11920f157fc2a53f5bd5
+  Result: a6e784bebf48b471d59cddc1adb81f41f678c487
+  Spine: b6cd2409c852db86c6c446c5777690183499764f
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 463e675a754b290c55c5e53927196e5a929681b4
+
+COCOAPODS: 1.6.0.beta.1
