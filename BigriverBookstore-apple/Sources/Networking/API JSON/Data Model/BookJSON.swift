@@ -12,6 +12,7 @@ import Spine
 class BookJSON: Resource {
     var title: String?
     var author: AuthorJSON?
+    var publishDate:Date?
     var photos: LinkedResourceCollection?
 
     override class var resourceType: ResourceType {
@@ -22,6 +23,7 @@ class BookJSON: Resource {
         return fieldsFromDictionary([
             "title": Attribute(),
             "author": ToOneRelationship(AuthorJSON.self),
+            "publishDate":DateAttribute().serializeAs("date_published"),
             "photos": ToManyRelationship(PhotoJSON.self)
         ])
     }
