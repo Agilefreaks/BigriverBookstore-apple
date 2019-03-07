@@ -15,10 +15,6 @@ class PhotoTests: XCTestCase {
         photo = Photo(with: "Image title", url: URL(string: "http://image.com")!)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testPhotoConstructor() {
         XCTAssertNotNil(photo)
         XCTAssertEqual(photo!.title, "Image title")
