@@ -18,9 +18,11 @@ struct Photo {
         self.url = url
     }
 
-     init(jsonPhoto: PhotoJSON?) {
-        let title = jsonPhoto?.title ?? ""
-        let url = jsonPhoto?.url ?? URL(string: "www.nil.com")!
-        self.init(with: title, url: url)
+    init?(jsonPhoto: PhotoJSON?) {
+        guard let tile = jsonPhoto?.title, let url = jsonPhoto?.url else {
+            return nil
+        }
+        self.title = tile
+        self.url = url
     }
 }

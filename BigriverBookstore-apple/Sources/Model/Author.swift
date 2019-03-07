@@ -15,8 +15,10 @@ struct Author {
         self.name = name
     }
 
-     init(jsonAuthor: AuthorJSON?) {
-        let name = jsonAuthor?.name ?? ""
-        self.init(with: name)
+    init?(jsonAuthor: AuthorJSON?) {
+        guard let name = jsonAuthor?.name else {
+            return nil
+        }
+        self.name = name
     }
 }
