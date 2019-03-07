@@ -8,10 +8,10 @@
 
 import Spine
 
-class Book {
-    var title: String
-    var author: Author
-    var photos: [Photo]
+struct Book {
+    let title: String
+    let author: Author
+    let photos: [Photo]
 
     init(with title: String, author: Author, photos: [Photo]) {
         self.title = title
@@ -19,7 +19,7 @@ class Book {
         self.photos = photos
     }
 
-    convenience init(jsonBook: BookJSON?) {
+    init(jsonBook: BookJSON?) {
         let bookTitle = jsonBook?.title ?? ""
         let bookAuthor = Author(jsonAuthor: jsonBook?.author)
         let photos = jsonBook?.photos?.resources.compactMap({ (Photo(jsonPhoto: $0 as? PhotoJSON)) }) ?? [Photo]()

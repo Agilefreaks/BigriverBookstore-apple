@@ -9,16 +9,16 @@
 import Foundation
 import Spine
 
-class Photo {
-    var title: String
-    var url: URL
+struct Photo {
+    let title: String
+    let url: URL
 
     init(with title: String, url: URL) {
         self.title = title
         self.url = url
     }
 
-    convenience init(jsonPhoto: PhotoJSON?) {
+     init(jsonPhoto: PhotoJSON?) {
         let title = jsonPhoto?.title ?? ""
         let url = jsonPhoto?.url ?? URL(string: "www.nil.com")!
         self.init(with: title, url: url)

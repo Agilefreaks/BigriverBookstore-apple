@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Author {
-    var name: String
+struct Author {
+    let name: String
 
     init(with name: String) {
         self.name = name
     }
 
-    convenience init(jsonAuthor: AuthorJSON?) {
+     init(jsonAuthor: AuthorJSON?) {
         let name = jsonAuthor?.name ?? ""
         self.init(with: name)
     }

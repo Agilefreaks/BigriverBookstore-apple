@@ -22,8 +22,6 @@
 		27363600222FF70300E3D751 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273635FF222FF70300E3D751 /* BookTests.swift */; };
 		27363602222FFB6C00E3D751 /* AuthorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27363601222FFB6C00E3D751 /* AuthorTests.swift */; };
 		27363604222FFCE400E3D751 /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27363603222FFCE400E3D751 /* PhotoTests.swift */; };
-		274EB353223025B3005D66D6 /* BooksControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB352223025B3005D66D6 /* BooksControllerTests.swift */; };
-		274EB35B22302757005D66D6 /* BigriverBookstore_appleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB35A22302757005D66D6 /* BigriverBookstore_appleUITests.swift */; };
 		27A934CC222D5E2C00F8327D /* APIJSONConnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A934CB222D5E2C00F8327D /* APIJSONConnexion.swift */; };
 		27DE6409222D42E600200462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE6408222D42E600200462 /* AppDelegate.swift */; };
 		27DE640D222D42E700200462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640C222D42E700200462 /* Assets.xcassets */; };
@@ -68,9 +66,7 @@
 		273635FF222FF70300E3D751 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		27363601222FFB6C00E3D751 /* AuthorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTests.swift; sourceTree = "<group>"; };
 		27363603222FFCE400E3D751 /* PhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTests.swift; sourceTree = "<group>"; };
-		274EB352223025B3005D66D6 /* BooksControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksControllerTests.swift; sourceTree = "<group>"; };
 		274EB35822302757005D66D6 /* BigriverBookstore-appleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BigriverBookstore-appleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		274EB35A22302757005D66D6 /* BigriverBookstore_appleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigriverBookstore_appleUITests.swift; sourceTree = "<group>"; };
 		274EB35C22302757005D66D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A934CB222D5E2C00F8327D /* APIJSONConnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJSONConnexion.swift; sourceTree = "<group>"; };
 		27DE6405222D42E600200462 /* BigriverBookstore-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BigriverBookstore-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,7 +200,6 @@
 		274EB35922302757005D66D6 /* BigriverBookstore-appleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				274EB35A22302757005D66D6 /* BigriverBookstore_appleUITests.swift */,
 				274EB35C22302757005D66D6 /* Info.plist */,
 			);
 			path = "BigriverBookstore-appleUITests";
@@ -251,7 +246,6 @@
 				273635FE222FF6AF00E3D751 /* Model */,
 				273635D8222E81CF00E3D751 /* LibraryBooksViewModelTests.swift */,
 				273635DA222E825300E3D751 /* APIServiceTests.swift */,
-				274EB352223025B3005D66D6 /* BooksControllerTests.swift */,
 				27DE641D222D42E700200462 /* Info.plist */,
 			);
 			path = "BigriverBookstore-appleTests";
@@ -513,7 +507,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274EB35B22302757005D66D6 /* BigriverBookstore_appleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +534,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274EB353223025B3005D66D6 /* BooksControllerTests.swift in Sources */,
 				27363600222FF70300E3D751 /* BookTests.swift in Sources */,
 				273635D9222E81CF00E3D751 /* LibraryBooksViewModelTests.swift in Sources */,
 				27363604222FFCE400E3D751 /* PhotoTests.swift in Sources */,

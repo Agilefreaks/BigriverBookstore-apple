@@ -16,7 +16,10 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource {
         super.viewDidLoad()
         libraryBooks.loadBookList()
         libraryBooks.refreshData = {
-            self.libraryBooksCollectionView.reloadData()
+            DispatchQueue.main.async {
+                self.libraryBooksCollectionView.reloadData()
+            }
+            
         }
         configureLibraryCollectionView()
         
