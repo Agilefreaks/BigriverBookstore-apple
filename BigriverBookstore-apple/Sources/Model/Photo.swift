@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Spine
 
 struct Photo {
     let title: String

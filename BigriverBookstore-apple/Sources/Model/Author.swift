@@ -6,7 +6,6 @@
 //  Copyright © 2019 AgileFreaks. All rights reserved.
 //
 
-import Foundation
 
 struct Author {
     let name: String
