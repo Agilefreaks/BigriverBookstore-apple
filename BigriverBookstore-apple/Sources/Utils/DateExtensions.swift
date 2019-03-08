@@ -10,8 +10,8 @@ import Foundation
 
 extension Date {
     enum Format: String {
-        case yyyymmdd = "yyyy-mm-dd"
-        case mmddyyyy = "mm-dd-yyyy"
+        case yyyymmdd = "YYYY-MM-DD"
+        case mmddyyyy = "MM-DD-YYYY"
     }
 
     func stringWith(format: Format = .yyyymmdd) -> String {

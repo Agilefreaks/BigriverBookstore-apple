@@ -47,7 +47,6 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource, Coll
         let currentItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier("bookItem"), for: indexPath)
         
         guard let currentBookItem = currentItem as? CollectionViewBookItem else {
-            print("Error!")
             return NSCollectionViewItem()
         }
         currentBookItem.bookInfo = libraryBooks.currentBookList[indexPath.item]

@@ -67,7 +67,6 @@ class BookDetailsViewController: NSViewController, NSCollectionViewDataSource, C
         let currentItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier("collectionItem"), for: indexPath)
         
         guard let photoItem = currentItem as? CollectionViewDetailsPhotoItem, let bookInfo = book else {
-            print("Error!")
             return NSCollectionViewItem()
         }
         photoItem.photoInfo = bookInfo.photos[indexPath.item]

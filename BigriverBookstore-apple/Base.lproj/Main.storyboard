@@ -731,7 +731,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KdR-Ha-7Z0">
-                                        <rect key="frame" x="80" y="2" width="52" height="31"/>
+                                        <rect key="frame" x="80" y="1" width="52" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="square" title="Back" bezelStyle="shadowlessSquare" image="NSLeftFacingTriangleTemplate" imagePosition="left" alignment="center" inset="2" id="nX4-e4-UqM">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -767,7 +767,7 @@
         <!--Library Books Controller-->
         <scene sceneID="zg5-Bj-dao">
             <objects>
-                <viewController id="dnN-uf-GMa" customClass="LibraryBooksController" customModule="BigriverBookstore_apple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LibraryBooksController" id="dnN-uf-GMa" customClass="LibraryBooksController" customModule="BigriverBookstore_apple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" identifier="libraryBooksController" wantsLayer="YES" id="NTB-b1-Fn0">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="522"/>
                         <autoresizingMask key="autoresizingMask"/>

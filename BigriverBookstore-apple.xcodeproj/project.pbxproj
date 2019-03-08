@@ -30,6 +30,7 @@
 		274EB37222319B15005D66D6 /* CollectionViewDetailsPhotoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274EB37022319B15005D66D6 /* CollectionViewDetailsPhotoItem.xib */; };
 		274EB37422319C47005D66D6 /* CollectionViewDetailsPhotoItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB37322319C47005D66D6 /* CollectionViewDetailsPhotoItemDelegate.swift */; };
 		274EB3762231A34A005D66D6 /* AsyncImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB3752231A34A005D66D6 /* AsyncImageLoading.swift */; };
+		274EB37C223276FA005D66D6 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274EB37B223276FA005D66D6 /* DateExtensionsTests.swift */; };
 		27A934CC222D5E2C00F8327D /* APIJSONConnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A934CB222D5E2C00F8327D /* APIJSONConnexion.swift */; };
 		27DE6409222D42E600200462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE6408222D42E600200462 /* AppDelegate.swift */; };
 		27DE640D222D42E700200462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DE640C222D42E700200462 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		274EB37022319B15005D66D6 /* CollectionViewDetailsPhotoItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewDetailsPhotoItem.xib; sourceTree = "<group>"; };
 		274EB37322319C47005D66D6 /* CollectionViewDetailsPhotoItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDetailsPhotoItemDelegate.swift; sourceTree = "<group>"; };
 		274EB3752231A34A005D66D6 /* AsyncImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoading.swift; sourceTree = "<group>"; };
+		274EB37B223276FA005D66D6 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
 		27A934CB222D5E2C00F8327D /* APIJSONConnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJSONConnexion.swift; sourceTree = "<group>"; };
 		27DE6405222D42E600200462 /* BigriverBookstore-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BigriverBookstore-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DE6408222D42E600200462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +255,14 @@
 			name = Others;
 			sourceTree = "<group>";
 		};
+		274EB37A223276D7005D66D6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				274EB37B223276FA005D66D6 /* DateExtensionsTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		27DE63FC222D42E600200462 = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				273635FE222FF6AF00E3D751 /* Model */,
+				274EB37A223276D7005D66D6 /* Utils */,
 				273635D8222E81CF00E3D751 /* LibraryBooksViewModelTests.swift */,
 				273635DA222E825300E3D751 /* APIServiceTests.swift */,
 				27DE641D222D42E700200462 /* Info.plist */,
@@ -595,6 +606,7 @@
 				27363604222FFCE400E3D751 /* PhotoTests.swift in Sources */,
 				27363602222FFB6C00E3D751 /* AuthorTests.swift in Sources */,
 				273635DB222E825300E3D751 /* APIServiceTests.swift in Sources */,
+				274EB37C223276FA005D66D6 /* DateExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
