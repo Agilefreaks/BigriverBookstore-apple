@@ -33,7 +33,7 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource, Coll
     func showMoreDetailsAbout(book: Book) {
         if let newController = storyboard?.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("BookDetailsViewController")) as? BookDetailsViewController, let windowController = self.view.window?.contentViewController as? MainNavigationViewController {
             newController.book = book
-            windowController.pushNewControllerInNavigationStack(from: self, to: newController, newSectionName: book.title)
+            windowController.pushNewControllerInNavigationStack(from: self, to: newController, withSectionName: book.title)
         }
     }
     

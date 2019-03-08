@@ -13,12 +13,12 @@ class CollectionViewDetailsPhotoItem: NSCollectionViewItem {
     weak var delegate: CollectionViewDetailsPhotoItemDelegate?
     var photoInfo: Photo? {
         didSet {
-            if let photoI = photoInfo {
-                AsyncImageLoading().loadImageFrom(url: photoI.url) { image in
-                    DispatchQueue.main.async { self.currentImageView.image = image }
-                }
-            } else {
+            guard let photoInfo = photoInfo else {
                 currentImageView.image = #imageLiteral(resourceName: "bookCoverPlaceholder")
+                return
+            }
+            AsyncImageLoading().loadImageFrom(url: photoInfo.url) { image in
+                DispatchQueue.main.async { self.currentImageView.image = image }
             }
         }
     }
