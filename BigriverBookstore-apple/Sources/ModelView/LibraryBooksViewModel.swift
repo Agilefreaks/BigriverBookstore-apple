@@ -25,4 +25,11 @@ class LibraryBooksViewModel {
             self.refreshData?()
         }
     }
+
+    func loadBookListFilteredBy(author:Author){
+        apiService.retrieveBookListOf(author: author) { (bookList) in
+            self.currentBookList = bookList
+            self.refreshData?()
+        }
+    }
 }

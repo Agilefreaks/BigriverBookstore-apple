@@ -25,4 +25,15 @@ class LibraryBooksViewModelTests: XCTestCase {
         XCTAssert(XCTWaiter().wait(for: [expectdata], timeout: 5) == .completed)
         XCTAssertEqual(library!.currentBookList.count, 1)
     }
+
+    func testFilterLoading(){
+        let expectdata = expectation(description: "Wait 5 sec")
+        library?.refreshData = {
+            expectdata.fulfill()
+        }
+        library?.loadBookListFilteredBy(author: Author.init(with: "Paul"))
+        XCTAssertNotNil(library)
+        XCTAssert(XCTWaiter().wait(for: [expectdata], timeout: 5) == .completed)
+        XCTAssertEqual(library!.currentBookList.count, 1)
+    }
 }
