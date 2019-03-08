@@ -10,15 +10,15 @@ import Foundation
 
 class LibraryBooksViewModel {
     var currentBookList: [Book] = []
-    
+
     var refreshData: (() -> Void)?
-    
+
     private var apiService: APIService
-    
+
     init(with apiService: APIService = APIJSONConnexion()) {
         self.apiService = apiService
     }
-    
+
     func loadBookList() {
         apiService.retrieveBookList { bookList in
             self.currentBookList = bookList
@@ -26,8 +26,8 @@ class LibraryBooksViewModel {
         }
     }
 
-    func loadBookListFilteredBy(author:Author){
-        apiService.retrieveBookListOf(author: author) { (bookList) in
+    func loadBookListFilteredBy(author: Author) {
+        apiService.retrieveBookListOf(author: author) { bookList in
             self.currentBookList = bookList
             self.refreshData?()
         }

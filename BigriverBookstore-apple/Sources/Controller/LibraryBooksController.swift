@@ -23,6 +23,10 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource, Coll
         }
     }
 
+    @IBAction func AddAuthorFilter(_ sender:Any){
+        applyFilterFor(author: Author.init(with: "Miss Noemy Paucek DVM", id: "7"))
+    }
+
     func applyFilterFor(author: Author) {
         libraryBooks.loadBookListFilteredBy(author: author)
     }

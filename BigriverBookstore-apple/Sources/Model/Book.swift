@@ -33,14 +33,14 @@ struct Book {
         self.photos = photos
     }
 
-    init?(jsonBook: BookJSON?, forAuthor theAuthor:Author) {
+    init?(jsonBook: BookJSON?, forAuthor author: Author) {
         guard let bookTitle = jsonBook?.title,
             let date = jsonBook?.publishDate,
             let photos = jsonBook?.photos?.resources.compactMap({ (Photo(jsonPhoto: $0 as? PhotoJSON)) }) else {
-                return nil
+            return nil
         }
         self.title = bookTitle
-        self.author = theAuthor
+        self.author = author
         self.publishingDate = date
         self.photos = photos
     }
