@@ -10,4 +10,5 @@ import Foundation
 
 protocol APIService {
     func retrieveBookList(completionHandler: (([Book]) -> Void)?)
+    func retrieveBookListOf(author: Author, completionHandler: (([Book]) -> Void)?)
 }

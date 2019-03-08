@@ -31,4 +31,6 @@ class APIJSONConnexion: APIService {
             print(error)
         }
     }
+
+    func retrieveBookListOf(author: Author, completionHandler: (([Book]) -> Void)?) {}
 }
