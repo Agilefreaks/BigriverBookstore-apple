@@ -41,9 +41,9 @@ class APIJSONConnexion: APIService {
 
         spine.find(booksQuery).onSuccess { arg0 in
             let (resources, _, _) = arg0
-            completionHandler?(resources.compactMap({ (Book(jsonBook: $0 as? BookJSON,forAuthor:author)) }))
-            }.onFailure { error in
-                print(error)
+            completionHandler?(resources.compactMap({ (Book(jsonBook: $0 as? BookJSON, forAuthor: author)) }))
+        }.onFailure { error in
+            print(error)
         }
     }
 }

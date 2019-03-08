@@ -11,5 +11,5 @@ import Foundation
 struct NetworkingConstants {
     static let baseURL = URL(string: "http://jsonapiplayground.reyesoft.com")!
     static let booksPath: String = "v2/books"
-    static let authorsPath:String = "v2/authors"
+    static let authorsPath: String = "v2/authors"
 }

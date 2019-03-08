@@ -8,9 +8,9 @@
 
 struct Author {
     let name: String
-    let id:String
+    let id: String
 
-    init(with name: String, id:String) {
+    init(with name: String, id: String) {
         self.name = name
         self.id = id
     }
