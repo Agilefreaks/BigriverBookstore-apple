@@ -10,10 +10,10 @@ import Foundation
 
 class APIServiceTests: APIService {
     func retrieveBookList(completionHandler: (([Book]) -> Void)?) {
-        completionHandler?([Book(with: "Book title", author: Author(with: "Author name"), publishingDate: Date(), photos: [])])
+        completionHandler?([Book(with: "Book title", author: Author(with: "Author name",id:"0"), publishingDate: Date(), photos: [])])
     }
 
     func retrieveBookListOf(author: Author, completionHandler: (([Book]) -> Void)?) {
-        completionHandler?([Book(with: "Book title", author: Author(with: "Author name"), publishingDate: Date(), photos: [])])
+        completionHandler?([Book(with: "Book title", author: Author(with: "Author name",id:"0"), publishingDate: Date(), photos: [])])
     }
 }

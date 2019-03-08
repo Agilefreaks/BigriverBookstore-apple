@@ -31,7 +31,7 @@ class LibraryBooksViewModelTests: XCTestCase {
         library?.refreshData = {
             expectdata.fulfill()
         }
-        library?.loadBookListFilteredBy(author: Author.init(with: "Paul"))
+        library?.loadBookListFilteredBy(author: Author.init(with: "Paul",id:"0"))
         XCTAssertNotNil(library)
         XCTAssert(XCTWaiter().wait(for: [expectdata], timeout: 5) == .completed)
         XCTAssertEqual(library!.currentBookList.count, 1)

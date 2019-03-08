@@ -12,7 +12,7 @@ class BookTests: XCTestCase {
     var book: Book?
 
     override func setUp() {
-        book = Book.init(with: "Book title", author: Author.init(with: "Author name"), publishingDate: Date.init(), photos: [])
+        book = Book.init(with: "Book title", author: Author.init(with: "Author name",id:"0"), publishingDate: Date.init(), photos: [])
     }
 
     func testBookContructor() {
