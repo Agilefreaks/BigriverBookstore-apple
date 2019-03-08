@@ -6,7 +6,6 @@
 //  Copyright © 2019 AgileFreaks. All rights reserved.
 //
 
-
 struct Author {
     let name: String
 

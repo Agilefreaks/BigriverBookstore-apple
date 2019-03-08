@@ -768,7 +768,7 @@
         <scene sceneID="zg5-Bj-dao">
             <objects>
                 <viewController id="dnN-uf-GMa" customClass="LibraryBooksController" customModule="BigriverBookstore_apple" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" identifier="libraryBooksController" id="NTB-b1-Fn0">
+                    <view key="view" identifier="libraryBooksController" wantsLayer="YES" id="NTB-b1-Fn0">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="522"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -905,18 +905,18 @@
                                     </subviews>
                                 </view>
                             </box>
-                            <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-c9-VeB">
-                                <rect key="frame" x="0.0" y="0.0" width="444" height="110"/>
+                            <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-c9-VeB">
+                                <rect key="frame" x="0.0" y="0.0" width="444" height="200"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="t25-Zy-eoA">
-                                    <rect key="frame" x="0.0" y="0.0" width="444" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="444" height="200"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView ambiguous="YES" id="xR1-KI-AFz">
-                                            <rect key="frame" x="0.0" y="0.0" width="444" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="444" height="200"/>
                                             <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="25" minimumLineSpacing="20" scrollDirection="horizontal" id="Jtx-vG-SOb">
-                                                <size key="itemSize" width="50" height="90"/>
+                                                <size key="itemSize" width="120" height="180"/>
                                                 <edgeInsets key="sectionInset" left="20" right="20" top="-20" bottom="0.0"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,10 +10,10 @@ import Foundation
 struct Book {
     let title: String
     let author: Author
-    let publishingDate:Date
+    let publishingDate: Date
     let photos: [Photo]
 
-    init(with title: String, author: Author, publishingDate:Date, photos: [Photo]) {
+    init(with title: String, author: Author, publishingDate: Date, photos: [Photo]) {
         self.title = title
         self.author = author
         self.publishingDate = publishingDate

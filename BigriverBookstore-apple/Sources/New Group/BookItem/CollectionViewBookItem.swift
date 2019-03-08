@@ -13,26 +13,29 @@ class CollectionViewBookItem: NSCollectionViewItem {
     @IBOutlet var authorNameTextField: NSTextField!
     @IBOutlet var bookCoverImageView: NSImageView!
 
+    weak var delegate: CollectionViewBookItemDelegate?
+
     var bookInfo: Book? {
         didSet {
-            if let book = bookInfo {
-                bookTitleTextField.stringValue = book.title
-                bookTitleTextField.toolTip = bookTitleTextField.stringValue
-                authorNameTextField.stringValue = book.author.name
-                authorNameTextField.toolTip = authorNameTextField.stringValue
-                if !book.photos.isEmpty {
-                    loadImage(from: book.photos[0].url)
-                }
+            guard let book = bookInfo else {
+                return
             }
+            bookTitleTextField.stringValue = book.title
+            bookTitleTextField.toolTip = bookTitleTextField.stringValue
+            authorNameTextField.stringValue = book.author.name
+            authorNameTextField.toolTip = authorNameTextField.stringValue
+
+            if !book.photos.isEmpty {
+                AsyncImageLoading().loadImageFrom(url: book.photos[0].url) { image in
+                    DispatchQueue.main.async { self.bookCoverImageView.image = image }
+                }
+            } else { bookCoverImageView.image = #imageLiteral(resourceName: "bookCoverPlaceholder") }
         }
     }
 
-    private func loadImage(from url: URL) {
-        DispatchQueue.global().async {
-            let imageData = try? Data(contentsOf: url)
-            if let imageData = imageData {
-                DispatchQueue.main.async { self.bookCoverImageView.image = NSImage(data: imageData) }
-            }
+    @IBAction func showMoreDetailsAboutCurrentBook(_ sender: Any) {
+        if let book = bookInfo {
+            delegate?.showMoreDetailsAbout(book: book)
         }
     }
 }
