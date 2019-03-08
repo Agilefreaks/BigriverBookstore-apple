@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class LibraryBooksController: NSViewController, NSCollectionViewDataSource {
+class LibraryBooksController: NSViewController, NSCollectionViewDataSource, CollectionViewBookItemDelegate {
     @IBOutlet var libraryBooksCollectionView: NSCollectionView!
     private var libraryBooks = LibraryBooksViewModel()
     
@@ -28,11 +28,16 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource {
         libraryBooksCollectionView.dataSource = self
     }
     
-    // MARK: - Collection view datasource
+    // MARK: - CollectionViewBookItemDelegate
     
-    func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return 1
+    func showMoreDetailsAbout(book: Book) {
+        if let newController = storyboard?.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("BookDetailsViewController")) as? BookDetailsViewController, let windowController = self.view.window?.contentViewController as? MainNavigationViewController {
+            newController.book = book
+            windowController.pushNewControllerInNavigationStack(from: self, to: newController, newSectionName: book.title)
+        }
     }
+    
+    // MARK: - Collection view datasource
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return libraryBooks.currentBookList.count
@@ -46,6 +51,7 @@ class LibraryBooksController: NSViewController, NSCollectionViewDataSource {
             return NSCollectionViewItem()
         }
         currentBookItem.bookInfo = libraryBooks.currentBookList[indexPath.item]
+        currentBookItem.delegate = self
         return currentBookItem
     }
 }
