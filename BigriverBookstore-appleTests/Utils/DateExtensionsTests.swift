@@ -10,10 +10,10 @@
 import XCTest
 
 class DateExtensionsTests: XCTestCase {
-    var date:Date?
+    var date: Date?
 
     override func setUp() {
-        date = Date.init(timeIntervalSince1970: 0)
+        date = Date(timeIntervalSince1970: 0)
     }
 
     func testDateFormatyyyymmdd() {
@@ -25,12 +25,4 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertNotNil(date)
         XCTAssertEqual(date!.stringWith(format: .mmddyyyy), "01-01-1970")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
