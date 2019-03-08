@@ -32,5 +32,18 @@ class APIJSONConnexion: APIService {
         }
     }
 
-    func retrieveBookListOf(author: Author, completionHandler: (([Book]) -> Void)?) {}
+    func retrieveBookListOf(author: Author, completionHandler: (([Book]) -> Void)?) {
+        _ = registerResources
+        let path = NetworkingConstants.authorsPath + "/" + author.id + "/books"
+        var booksQuery = Query(resourceType: BookJSON.self, path: path)
+        booksQuery.paginate(PageBasedPagination(pageNumber: 1, pageSize: 45))
+        booksQuery.include("photos")
+
+        spine.find(booksQuery).onSuccess { arg0 in
+            let (resources, _, _) = arg0
+            completionHandler?(resources.compactMap({ (Book(jsonBook: $0 as? BookJSON,forAuthor:author)) }))
+            }.onFailure { error in
+                print(error)
+        }
+    }
 }
