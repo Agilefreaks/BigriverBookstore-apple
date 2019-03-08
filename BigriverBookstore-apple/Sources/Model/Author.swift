@@ -8,15 +8,18 @@
 
 struct Author {
     let name: String
+    let id:String
 
-    init(with name: String) {
+    init(with name: String, id:String) {
         self.name = name
+        self.id = id
     }
 
     init?(jsonAuthor: AuthorJSON?) {
-        guard let name = jsonAuthor?.name else {
+        guard let name = jsonAuthor?.name, let id = jsonAuthor?.id else {
             return nil
         }
         self.name = name
+        self.id = id
     }
 }
