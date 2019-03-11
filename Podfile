@@ -7,8 +7,9 @@ target 'Big River Book Store' do
 
   # Pods for Big River Book Store
   
-  pod 'Alamofire', '~> 4.7'
-  pod 'AlamofireImage', '~> 3.4'
+  pod 'Alamofire', '4.8'
+  pod 'AlamofireImage', '3.5'
+  pod 'Vox/Alamofire', '1.2.1'
 
   target 'Big River Book StoreTests' do
     inherit! :search_paths
