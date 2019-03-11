@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F453689223656D100490AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F453688223656D100490AFB /* AppDelegate.swift */; };
+		9F45368B223656D100490AFB /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F45368A223656D100490AFB /* BookListViewController.swift */; };
+		9F45368E223656D100490AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F45368C223656D100490AFB /* Main.storyboard */; };
+		9F453690223656D400490AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F45368F223656D400490AFB /* Assets.xcassets */; };
+		9F453693223656D400490AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F453691223656D400490AFB /* LaunchScreen.storyboard */; };
+		9F45369E223656D400490AFB /* Big_River_Book_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */; };
+		9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */; };
+		9F4536B122365A0D00490AFB /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */; };
+		9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B322365ACB00490AFB /* NibLoadableView.swift */; };
+		9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B522365ADA00490AFB /* ReusableView.swift */; };
+		9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */; };
+		9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BA223667DC00490AFB /* Storyboarded.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F45369A223656D400490AFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F45367D223656D100490AFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F453684223656D100490AFB;
+			remoteInfo = "Big River Book Store";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F453685223656D100490AFB /* Big River Book Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big River Book Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F453688223656D100490AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F45368A223656D100490AFB /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		9F45368D223656D100490AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F45368F223656D400490AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F453692223656D400490AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F453694223656D400490AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F453699223656D400490AFB /* Big River Book StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Big River Book StoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Big_River_Book_StoreTests.swift; sourceTree = "<group>"; };
+		9F45369F223656D400490AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		9F4536B322365ACB00490AFB /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		9F4536B522365ADA00490AFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		9F4536BA223667DC00490AFB /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F453682223656D100490AFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F453696223656D400490AFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F45367C223656D100490AFB = {
+			isa = PBXGroup;
+			children = (
+				9F453687223656D100490AFB /* Big River Book Store */,
+				9F45369C223656D400490AFB /* Big River Book StoreTests */,
+				9F453686223656D100490AFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F453686223656D100490AFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F453685223656D100490AFB /* Big River Book Store.app */,
+				9F453699223656D400490AFB /* Big River Book StoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F453687223656D100490AFB /* Big River Book Store */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536B222365ABC00490AFB /* Helpers */,
+				9F4536AD2236588D00490AFB /* Models */,
+				9F4536AC2236588700490AFB /* Cells */,
+				9F4536AB2236587F00490AFB /* ViewControllers */,
+				9F4536AA2236586E00490AFB /* Project files */,
+				9F4536A92236585E00490AFB /* Storyboards */,
+				9F4536A82236584400490AFB /* Resources */,
+			);
+			path = "Big River Book Store";
+			sourceTree = "<group>";
+		};
+		9F45369C223656D400490AFB /* Big River Book StoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */,
+				9F45369F223656D400490AFB /* Info.plist */,
+			);
+			path = "Big River Book StoreTests";
+			sourceTree = "<group>";
+		};
+		9F4536A82236584400490AFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F45368F223656D400490AFB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9F4536A92236585E00490AFB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9F45368C223656D100490AFB /* Main.storyboard */,
+				9F453691223656D400490AFB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9F4536AA2236586E00490AFB /* Project files */ = {
+			isa = PBXGroup;
+			children = (
+				9F453688223656D100490AFB /* AppDelegate.swift */,
+				9F453694223656D400490AFB /* Info.plist */,
+			);
+			path = "Project files";
+			sourceTree = "<group>";
+		};
+		9F4536AB2236587F00490AFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F45368A223656D100490AFB /* BookListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9F4536AC2236588700490AFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */,
+				9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F4536AD2236588D00490AFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F4536B222365ABC00490AFB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536B722365B3200490AFB /* Extensions */,
+				9F4536B322365ACB00490AFB /* NibLoadableView.swift */,
+				9F4536B522365ADA00490AFB /* ReusableView.swift */,
+				9F4536BA223667DC00490AFB /* Storyboarded.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9F4536B722365B3200490AFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F453684223656D100490AFB /* Big River Book Store */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4536A2223656D400490AFB /* Build configuration list for PBXNativeTarget "Big River Book Store" */;
+			buildPhases = (
+				9F453681223656D100490AFB /* Sources */,
+				9F453682223656D100490AFB /* Frameworks */,
+				9F453683223656D100490AFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Big River Book Store";
+			productName = "Big River Book Store";
+			productReference = 9F453685223656D100490AFB /* Big River Book Store.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F453698223656D400490AFB /* Big River Book StoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4536A5223656D400490AFB /* Build configuration list for PBXNativeTarget "Big River Book StoreTests" */;
+			buildPhases = (
+				9F453695223656D400490AFB /* Sources */,
+				9F453696223656D400490AFB /* Frameworks */,
+				9F453697223656D400490AFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F45369B223656D400490AFB /* PBXTargetDependency */,
+			);
+			name = "Big River Book StoreTests";
+			productName = "Big River Book StoreTests";
+			productReference = 9F453699223656D400490AFB /* Big River Book StoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F45367D223656D100490AFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Florin Uscatu";
+				TargetAttributes = {
+					9F453684223656D100490AFB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9F453698223656D400490AFB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9F453684223656D100490AFB;
+					};
+				};
+			};
+			buildConfigurationList = 9F453680223656D100490AFB /* Build configuration list for PBXProject "Big River Book Store" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F45367C223656D100490AFB;
+			productRefGroup = 9F453686223656D100490AFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F453684223656D100490AFB /* Big River Book Store */,
+				9F453698223656D400490AFB /* Big River Book StoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F453683223656D100490AFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F453693223656D400490AFB /* LaunchScreen.storyboard in Resources */,
+				9F4536B122365A0D00490AFB /* BookCollectionViewCell.xib in Resources */,
+				9F453690223656D400490AFB /* Assets.xcassets in Resources */,
+				9F45368E223656D100490AFB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F453697223656D400490AFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F453681223656D100490AFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */,
+				9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */,
+				9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */,
+				9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */,
+				9F45368B223656D100490AFB /* BookListViewController.swift in Sources */,
+				9F453689223656D100490AFB /* AppDelegate.swift in Sources */,
+				9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F453695223656D400490AFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F45369E223656D400490AFB /* Big_River_Book_StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F45369B223656D400490AFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F453684223656D100490AFB /* Big River Book Store */;
+			targetProxy = 9F45369A223656D400490AFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F45368C223656D100490AFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F45368D223656D100490AFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F453691223656D400490AFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F453692223656D400490AFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F4536A0223656D400490AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F4536A1223656D400490AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F4536A3223656D400490AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CEQW7LX82;
+				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "approcket.Big-River-Book-Store";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F4536A4223656D400490AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CEQW7LX82;
+				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "approcket.Big-River-Book-Store";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F4536A6223656D400490AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CEQW7LX82;
+				INFOPLIST_FILE = "Big River Book StoreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "approcket.Big-River-Book-StoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Big River Book Store.app/Big River Book Store";
+			};
+			name = Debug;
+		};
+		9F4536A7223656D400490AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CEQW7LX82;
+				INFOPLIST_FILE = "Big River Book StoreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "approcket.Big-River-Book-StoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Big River Book Store.app/Big River Book Store";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F453680223656D100490AFB /* Build configuration list for PBXProject "Big River Book Store" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4536A0223656D400490AFB /* Debug */,
+				9F4536A1223656D400490AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4536A2223656D400490AFB /* Build configuration list for PBXNativeTarget "Big River Book Store" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4536A3223656D400490AFB /* Debug */,
+				9F4536A4223656D400490AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4536A5223656D400490AFB /* Build configuration list for PBXNativeTarget "Big River Book StoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4536A6223656D400490AFB /* Debug */,
+				9F4536A7223656D400490AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F45367D223656D100490AFB /* Project object */;
+}
