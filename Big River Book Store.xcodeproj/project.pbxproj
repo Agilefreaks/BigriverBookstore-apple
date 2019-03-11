@@ -15,6 +15,9 @@
 		9F45369E223656D400490AFB /* Big_River_Book_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */; };
 		9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */; };
 		9F4536B122365A0D00490AFB /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */; };
+		9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B322365ACB00490AFB /* NibLoadableView.swift */; };
+		9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B522365ADA00490AFB /* ReusableView.swift */; };
+		9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		9F45369F223656D400490AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		9F4536B322365ACB00490AFB /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		9F4536B522365ADA00490AFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		9F453687223656D100490AFB /* Big River Book Store */ = {
 			isa = PBXGroup;
 			children = (
+				9F4536B222365ABC00490AFB /* Helpers */,
 				9F4536AD2236588D00490AFB /* Models */,
 				9F4536AC2236588700490AFB /* Cells */,
 				9F4536AB2236587F00490AFB /* ViewControllers */,
@@ -148,6 +155,24 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9F4536B222365ABC00490AFB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536B722365B3200490AFB /* Extensions */,
+				9F4536B322365ACB00490AFB /* NibLoadableView.swift */,
+				9F4536B522365ADA00490AFB /* ReusableView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9F4536B722365B3200490AFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */,
+				9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */,
+				9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */,
 				9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */,
 				9F45368B223656D100490AFB /* BookListViewController.swift in Sources */,
 				9F453689223656D100490AFB /* AppDelegate.swift in Sources */,

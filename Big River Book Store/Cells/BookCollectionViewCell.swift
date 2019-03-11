@@ -16,3 +16,5 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
 
 }
+
+extension BookCollectionViewCell: NibLoadableView, ReusableView {}

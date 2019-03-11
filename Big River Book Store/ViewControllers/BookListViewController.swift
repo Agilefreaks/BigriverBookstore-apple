@@ -15,6 +15,7 @@ class BookListViewController: UIViewController {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
+            collectionView.register(BookCollectionViewCell.self)
         }
     }
     
@@ -31,7 +32,8 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell: BookCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        return cell
     }
 }
 
