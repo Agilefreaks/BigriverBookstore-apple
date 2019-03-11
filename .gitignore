@@ -1,0 +1,10 @@
+## Build generated
+build/
+DerivedData/
+
+Pods/
+
+*.xcworkspacedata
+*.xcworkspace/xcshareddata
+*.lock
+
