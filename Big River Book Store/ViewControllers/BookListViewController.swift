@@ -29,7 +29,12 @@ class BookListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setup()
+    }
+    
+    // MARK: - Setup
+    private func setup() {
+        title = "BigRiver Bookstore"
     }
 }
 

@@ -13,7 +13,7 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var bookCoverImageView: UIImageView!
     @IBOutlet private weak var bookTitleLabel: UILabel!
     @IBOutlet private weak var bookAuthorLabel: UILabel!
-    
+    @IBOutlet private weak var bgView: UIView!
 }
 
 extension BookCollectionViewCell: NibLoadableView, ReusableView {}

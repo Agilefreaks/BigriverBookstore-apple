@@ -19,43 +19,61 @@
                 <rect key="frame" x="0.0" y="0.0" width="213" height="278"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kVk-nw-4Mq">
-                        <rect key="frame" x="0.0" y="0.0" width="213" height="139"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="War and Peace" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKa-iP-8aW">
-                        <rect key="frame" x="20" y="156" width="173" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Leo Tolstoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27B-HB-vNT">
-                        <rect key="frame" x="20" y="240" width="173" height="18"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vth-sr-wiL">
+                        <rect key="frame" x="0.0" y="0.0" width="213" height="278"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kVk-nw-4Mq">
+                                <rect key="frame" x="0.0" y="0.0" width="213" height="139"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="War and Peace" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKa-iP-8aW">
+                                <rect key="frame" x="20" y="156" width="173" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Leo Tolstoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27B-HB-vNT">
+                                <rect key="frame" x="20" y="240" width="173" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="m4o-Px-Ef6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="18" id="m4o-Px-Ef6"/>
+                            <constraint firstAttribute="trailing" secondItem="kVk-nw-4Mq" secondAttribute="trailing" id="1GA-p5-VAx"/>
+                            <constraint firstAttribute="trailing" secondItem="27B-HB-vNT" secondAttribute="trailing" constant="20" id="8ne-N6-m8M"/>
+                            <constraint firstItem="27B-HB-vNT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qKa-iP-8aW" secondAttribute="bottom" constant="10" id="EDu-W0-IeF"/>
+                            <constraint firstItem="kVk-nw-4Mq" firstAttribute="top" secondItem="Vth-sr-wiL" secondAttribute="top" id="LNl-WC-IFB"/>
+                            <constraint firstItem="kVk-nw-4Mq" firstAttribute="leading" secondItem="Vth-sr-wiL" secondAttribute="leading" id="XP7-Rh-RQO"/>
+                            <constraint firstItem="qKa-iP-8aW" firstAttribute="leading" secondItem="Vth-sr-wiL" secondAttribute="leading" constant="20" id="aig-JE-f7h"/>
+                            <constraint firstAttribute="trailing" secondItem="qKa-iP-8aW" secondAttribute="trailing" constant="20" id="nII-xM-ZgH"/>
+                            <constraint firstItem="27B-HB-vNT" firstAttribute="leading" secondItem="Vth-sr-wiL" secondAttribute="leading" constant="20" id="prB-tz-NLe"/>
+                            <constraint firstItem="kVk-nw-4Mq" firstAttribute="height" secondItem="Vth-sr-wiL" secondAttribute="height" multiplier="0.5" id="qJ2-iA-S5x"/>
+                            <constraint firstAttribute="bottom" secondItem="27B-HB-vNT" secondAttribute="bottom" constant="20" id="s9G-o9-jJm"/>
+                            <constraint firstItem="qKa-iP-8aW" firstAttribute="top" secondItem="kVk-nw-4Mq" secondAttribute="bottom" constant="17" id="vKM-p7-08K"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="qKa-iP-8aW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="152-eS-9M3"/>
-                <constraint firstItem="27B-HB-vNT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qKa-iP-8aW" secondAttribute="bottom" constant="10" id="7lR-Hq-GpH"/>
-                <constraint firstItem="qKa-iP-8aW" firstAttribute="top" secondItem="kVk-nw-4Mq" secondAttribute="bottom" constant="17" id="FWo-ll-Mxt"/>
-                <constraint firstAttribute="trailing" secondItem="kVk-nw-4Mq" secondAttribute="trailing" id="K9o-f8-XC4"/>
-                <constraint firstAttribute="trailing" secondItem="27B-HB-vNT" secondAttribute="trailing" constant="20" id="MqA-3g-Afg"/>
-                <constraint firstItem="kVk-nw-4Mq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="W2X-9q-buc"/>
-                <constraint firstItem="kVk-nw-4Mq" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.5" id="YW8-Cs-j2z"/>
-                <constraint firstItem="27B-HB-vNT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="beY-cg-SMW"/>
-                <constraint firstAttribute="trailing" secondItem="qKa-iP-8aW" secondAttribute="trailing" constant="20" id="haX-rt-XqA"/>
-                <constraint firstItem="kVk-nw-4Mq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jFG-XF-A62"/>
-                <constraint firstAttribute="bottom" secondItem="27B-HB-vNT" secondAttribute="bottom" constant="20" id="rWx-p4-gPo"/>
+                <constraint firstAttribute="trailing" secondItem="Vth-sr-wiL" secondAttribute="trailing" id="3eV-aW-qpI"/>
+                <constraint firstAttribute="bottom" secondItem="Vth-sr-wiL" secondAttribute="bottom" id="WSL-b8-YCf"/>
+                <constraint firstItem="Vth-sr-wiL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="adL-jg-mfL"/>
+                <constraint firstItem="Vth-sr-wiL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zjI-Gf-Y2v"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="213" height="278"/>
             <connections>
+                <outlet property="bgView" destination="Vth-sr-wiL" id="Z6r-qm-5iP"/>
                 <outlet property="bookAuthorLabel" destination="27B-HB-vNT" id="xMf-gt-Nud"/>
                 <outlet property="bookCoverImageView" destination="kVk-nw-4Mq" id="9pQ-KM-f0v"/>
                 <outlet property="bookTitleLabel" destination="qKa-iP-8aW" id="FyL-Ga-Ha3"/>
