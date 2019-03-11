@@ -34,6 +34,7 @@
 		9F4536D52236957300490AFB /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D42236957300490AFB /* CustomError.swift */; };
 		9F4536D72236960600490AFB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D62236960600490AFB /* UIViewController+Extension.swift */; };
 		9F4536D9223696DC00490AFB /* BookListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */; };
+		9F4536DB22369B4E00490AFB /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536DA22369B4E00490AFB /* BookViewModel.swift */; };
 		A7626F1601C184E90865B87B /* Pods_Big_River_Book_StoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EB7D7ED9404EEF02A96419 /* Pods_Big_River_Book_StoreTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		9F4536D42236957300490AFB /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		9F4536D62236960600490AFB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelTests.swift; sourceTree = "<group>"; };
+		9F4536DA22369B4E00490AFB /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		D9EB7D7ED9404EEF02A96419 /* Pods_Big_River_Book_StoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Big_River_Book_StoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				9F4536D22236923600490AFB /* BookListViewModel.swift */,
+				9F4536DA22369B4E00490AFB /* BookViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */,
 				9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */,
 				9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */,
+				9F4536DB22369B4E00490AFB /* BookViewModel.swift in Sources */,
 				9F4536D52236957300490AFB /* CustomError.swift in Sources */,
 				9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */,
 				9F4536C022367C9D00490AFB /* URLCreator.swift in Sources */,

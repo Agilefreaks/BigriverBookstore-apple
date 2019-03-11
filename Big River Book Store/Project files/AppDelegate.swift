@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let window = window {
             let mainViewController = BookListViewController.getInstance()
+            let mainViewModel = BookListViewModel()
+            mainViewController.viewModel = mainViewModel
             navigationController = UINavigationController(rootViewController: mainViewController)
             window.rootViewController = navigationController
             window.makeKeyAndVisible()

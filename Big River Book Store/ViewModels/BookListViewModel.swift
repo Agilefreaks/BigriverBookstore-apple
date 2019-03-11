@@ -11,9 +11,11 @@ import Foundation
 class BookListViewModel {
     
     // MARK: - Variables
-    private var books: [Book]!
+    private var books: [Book]?
     
     // MARK: - Lifecycle
+    init() {}
+    
     init(books: [Book]) {
         self.books = books
     }
@@ -39,10 +41,11 @@ class BookListViewModel {
     }
     
     func numberOfBooks() -> Int {
-        return books.count
+        return books?.count ?? 0
     }
     
-    func book(at indexPath: IndexPath) -> Book {
+    func book(at indexPath: IndexPath) -> Book? {
+        guard let books = books else { return nil }
         return books[indexPath.row]
     }
 }

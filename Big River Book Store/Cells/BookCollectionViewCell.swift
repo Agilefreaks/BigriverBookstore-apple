@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class BookCollectionViewCell: UICollectionViewCell {
 
@@ -14,6 +15,13 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var bookTitleLabel: UILabel!
     @IBOutlet private weak var bookAuthorLabel: UILabel!
     @IBOutlet private weak var bgView: UIView!
+    
+    func configure(with viewModel: BookViewModel) {
+        bookTitleLabel.text = viewModel.title
+        bookAuthorLabel.text = viewModel.author
+        guard let imageURL = viewModel.mainPhotoURL, let url = URL(string: imageURL) else { return }
+        bookCoverImageView.af_setImage(withURL: url)
+    }
 }
 
 extension BookCollectionViewCell: NibLoadableView, ReusableView {}

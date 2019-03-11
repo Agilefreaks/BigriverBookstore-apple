@@ -60,6 +60,9 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BookCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        if let book = viewModel?.book(at: indexPath) {
+            cell.configure(with: BookViewModel(with: book))
+        }
         return cell
     }
 }
