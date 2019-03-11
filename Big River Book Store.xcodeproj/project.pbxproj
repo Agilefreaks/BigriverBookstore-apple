@@ -77,12 +77,12 @@
 		9F453687223656D100490AFB /* Big River Book Store */ = {
 			isa = PBXGroup;
 			children = (
-				9F453688223656D100490AFB /* AppDelegate.swift */,
-				9F45368A223656D100490AFB /* ViewController.swift */,
-				9F45368C223656D100490AFB /* Main.storyboard */,
-				9F45368F223656D400490AFB /* Assets.xcassets */,
-				9F453691223656D400490AFB /* LaunchScreen.storyboard */,
-				9F453694223656D400490AFB /* Info.plist */,
+				9F4536AD2236588D00490AFB /* Models */,
+				9F4536AC2236588700490AFB /* Cells */,
+				9F4536AB2236587F00490AFB /* ViewControllers */,
+				9F4536AA2236586E00490AFB /* Project files */,
+				9F4536A92236585E00490AFB /* Storyboards */,
+				9F4536A82236584400490AFB /* Resources */,
 			);
 			path = "Big River Book Store";
 			sourceTree = "<group>";
@@ -94,6 +94,54 @@
 				9F45369F223656D400490AFB /* Info.plist */,
 			);
 			path = "Big River Book StoreTests";
+			sourceTree = "<group>";
+		};
+		9F4536A82236584400490AFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F45368F223656D400490AFB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9F4536A92236585E00490AFB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9F45368C223656D100490AFB /* Main.storyboard */,
+				9F453691223656D400490AFB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9F4536AA2236586E00490AFB /* Project files */ = {
+			isa = PBXGroup;
+			children = (
+				9F453688223656D100490AFB /* AppDelegate.swift */,
+				9F453694223656D400490AFB /* Info.plist */,
+			);
+			path = "Project files";
+			sourceTree = "<group>";
+		};
+		9F4536AB2236587F00490AFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F45368A223656D100490AFB /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9F4536AC2236588700490AFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F4536AD2236588D00490AFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CEQW7LX82;
-				INFOPLIST_FILE = "Big River Book Store/Info.plist";
+				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CEQW7LX82;
-				INFOPLIST_FILE = "Big River Book Store/Info.plist";
+				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
