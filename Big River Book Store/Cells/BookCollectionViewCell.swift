@@ -10,11 +10,10 @@ import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+    @IBOutlet private weak var bookCoverImageView: UIImageView!
+    @IBOutlet private weak var bookTitleLabel: UILabel!
+    @IBOutlet private weak var bookAuthorLabel: UILabel!
+    
 }
 
 extension BookCollectionViewCell: NibLoadableView, ReusableView {}

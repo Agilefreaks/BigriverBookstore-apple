@@ -15,6 +15,7 @@ class BookListViewController: UIViewController {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
+            collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             collectionView.register(BookCollectionViewCell.self)
         }
     }
@@ -34,6 +35,15 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BookCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         return cell
+    }
+}
+
+extension BookListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // TODO: - Change this!!!
+        let width = (collectionView.frame.size.width - 30.0) / 2.0
+        let height = width * 2.0
+        return CGSize(width: width, height: height)
     }
 }
 
