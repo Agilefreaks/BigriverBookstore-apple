@@ -20,6 +20,9 @@
 		9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B522365ADA00490AFB /* ReusableView.swift */; };
 		9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */; };
 		9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BA223667DC00490AFB /* Storyboarded.swift */; };
+		9F4536BE22367C3900490AFB /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BD22367C3900490AFB /* SessionManager.swift */; };
+		9F4536C022367C9D00490AFB /* URLCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BF22367C9D00490AFB /* URLCreator.swift */; };
+		9F4536C22236823200490AFB /* SessionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536C12236823200490AFB /* SessionManagerTests.swift */; };
 		A7626F1601C184E90865B87B /* Pods_Big_River_Book_StoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EB7D7ED9404EEF02A96419 /* Pods_Big_River_Book_StoreTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		9F4536B522365ADA00490AFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		9F4536BA223667DC00490AFB /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		9F4536BD22367C3900490AFB /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		9F4536BF22367C9D00490AFB /* URLCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCreator.swift; sourceTree = "<group>"; };
+		9F4536C12236823200490AFB /* SessionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerTests.swift; sourceTree = "<group>"; };
 		D9EB7D7ED9404EEF02A96419 /* Pods_Big_River_Book_StoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Big_River_Book_StoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 		9F453687223656D100490AFB /* Big River Book Store */ = {
 			isa = PBXGroup;
 			children = (
+				9F4536BC22367C1C00490AFB /* Networking */,
 				9F4536B222365ABC00490AFB /* Helpers */,
 				9F4536AD2236588D00490AFB /* Models */,
 				9F4536AC2236588700490AFB /* Cells */,
@@ -128,6 +135,7 @@
 			children = (
 				9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */,
 				9F45369F223656D400490AFB /* Info.plist */,
+				9F4536C12236823200490AFB /* SessionManagerTests.swift */,
 			);
 			path = "Big River Book StoreTests";
 			sourceTree = "<group>";
@@ -199,6 +207,15 @@
 				9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F4536BC22367C1C00490AFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536BD22367C3900490AFB /* SessionManager.swift */,
+				9F4536BF22367C9D00490AFB /* URLCreator.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		BE21E74A657388BFD0107CD6 /* Frameworks */ = {
@@ -390,8 +407,10 @@
 				9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */,
 				9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */,
 				9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */,
+				9F4536C022367C9D00490AFB /* URLCreator.swift in Sources */,
 				9F45368B223656D100490AFB /* BookListViewController.swift in Sources */,
 				9F453689223656D100490AFB /* AppDelegate.swift in Sources */,
+				9F4536BE22367C3900490AFB /* SessionManager.swift in Sources */,
 				9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4536C22236823200490AFB /* SessionManagerTests.swift in Sources */,
 				9F45369E223656D400490AFB /* Big_River_Book_StoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CEQW7LX82;
 				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,6 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CEQW7LX82;
 				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

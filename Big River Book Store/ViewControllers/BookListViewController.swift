@@ -30,6 +30,9 @@ class BookListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        SessionManager.getBooks { (data, error) in
+            
+        }
     }
     
     // MARK: - Setup
