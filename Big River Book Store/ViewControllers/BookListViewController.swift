@@ -15,10 +15,16 @@ class BookListViewController: UIViewController {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
-            collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            collectionView.contentInset = collectionViewEdgeInsets
             collectionView.register(BookCollectionViewCell.self)
         }
     }
+    
+    // MARK: - Constants
+    let collectionViewCellInset: CGFloat = 30.0
+    let numberOfCellsPerRow: CGFloat = 2.0
+    let collectionViewCellAspectRatio: CGFloat = 2.0
+    let collectionViewEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -40,9 +46,8 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension BookListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // TODO: - Change this!!!
-        let width = (collectionView.frame.size.width - 30.0) / 2.0
-        let height = width * 2.0
+        let width = (collectionView.frame.size.width - collectionViewCellInset) / numberOfCellsPerRow
+        let height = width * collectionViewCellAspectRatio
         return CGSize(width: width, height: height)
     }
 }
