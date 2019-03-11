@@ -23,7 +23,7 @@ class BookListViewController: UIViewController {
     // MARK: - Constants
     let collectionViewCellInset: CGFloat = 30.0
     let numberOfCellsPerRow: CGFloat = 2.0
-    let collectionViewCellAspectRatio: CGFloat = 2.0
+    let collectionViewCellAspectRatio: CGFloat = 1.5
     let collectionViewEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     // MARK: - Lifecycle
@@ -57,3 +57,8 @@ extension BookListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension BookListViewController: Storyboarded {
+    static var storyboardName: String {
+        return "Main"
+    }
+}

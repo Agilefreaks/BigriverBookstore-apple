@@ -18,6 +18,7 @@
 		9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B322365ACB00490AFB /* NibLoadableView.swift */; };
 		9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B522365ADA00490AFB /* ReusableView.swift */; };
 		9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */; };
+		9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BA223667DC00490AFB /* Storyboarded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		9F4536B322365ACB00490AFB /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		9F4536B522365ADA00490AFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		9F4536BA223667DC00490AFB /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				9F4536B722365B3200490AFB /* Extensions */,
 				9F4536B322365ACB00490AFB /* NibLoadableView.swift */,
 				9F4536B522365ADA00490AFB /* ReusableView.swift */,
+				9F4536BA223667DC00490AFB /* Storyboarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */,
 				9F45368B223656D100490AFB /* BookListViewController.swift in Sources */,
 				9F453689223656D100490AFB /* AppDelegate.swift in Sources */,
+				9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,9 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         if let window = window {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "BookListViewController")
-            navigationController = UINavigationController(rootViewController: controller)
+            let mainViewController = BookListViewController.getInstance()
+            navigationController = UINavigationController(rootViewController: mainViewController)
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
