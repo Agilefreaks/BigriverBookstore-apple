@@ -20,6 +20,9 @@ class BookListViewController: UIViewController {
         }
     }
     
+    // MARK: - Variables
+    var viewModel: BookListViewModel?
+    
     // MARK: - Constants
     let collectionViewCellInset: CGFloat = 30.0
     let numberOfCellsPerRow: CGFloat = 2.0
@@ -35,12 +38,24 @@ class BookListViewController: UIViewController {
     // MARK: - Setup
     private func setup() {
         title = "BigRiver Bookstore"
+        getBooks()
+    }
+    
+    private func getBooks() {
+        viewModel?.getBooks { [weak self] error in
+            guard let strongSelf = self else { return }
+            guard error == nil else {
+                strongSelf.presentAlert(with: "Error", message: error!.localizedDescription)
+                return
+            }
+            strongSelf.collectionView.reloadData()
+        }
     }
 }
 
 extension BookListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel?.numberOfBooks() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
