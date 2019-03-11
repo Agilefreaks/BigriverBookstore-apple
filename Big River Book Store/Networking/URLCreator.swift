@@ -9,7 +9,7 @@
 import Foundation
 
 enum URLCreator {
-    private static let baseURL = "http://jsonapiplayground.reyesoft.com/v2/"
-    public static let authors = baseURL + "authors"
-    public static let books = baseURL + "books"
+    public static let baseURL = "http://jsonapiplayground.reyesoft.com/v2"
+    public static let authors = "/authors"
+    public static let books = "/books"
 }

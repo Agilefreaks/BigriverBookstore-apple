@@ -26,7 +26,6 @@ class SessionManagerTests: XCTestCase {
             XCTAssertNotNil(data)
             exp.fulfill()
         }
-        
         waitForExpectations(timeout: 10) { (error) in
             guard let error = error else { return }
             XCTFail("error: \(error.localizedDescription)")

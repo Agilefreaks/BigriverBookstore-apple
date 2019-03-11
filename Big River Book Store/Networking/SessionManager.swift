@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Vox
 
 class SessionManager {
     
@@ -23,19 +24,21 @@ class SessionManager {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
-    
-    static func getBooks(completion block: @escaping (Data?, Error?) -> Void) {
-        sharedInstance.request(URLCreator.books, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
-            .responseData { response in
-                switch response.result {
-                case .failure(let error):
-                    print(error)
+    static func getBooks(completion block: @escaping ([Book]?, Error?) -> Void) {
+        guard let url = URL(string: URLCreator.baseURL) else { return }
+        let client = JSONAPIClient.Alamofire(baseURL: url)
+        let dataSource = DataSource<Book>(strategy: .path(URLCreator.books), client: client)
+        do {
+            try dataSource.fetch()
+                .result({ (document: Document<[Book]>) in
+                    guard let books = document.data else { return }
+                    block(books, nil)
+                }, { (error) in
                     block(nil, error)
-                case .success(let value):
-                    print(value)
-                    block(value, nil)
-                }
-            }
+                })
+        } catch let error {
+            block(nil, error)
+        }
     }
     
     
