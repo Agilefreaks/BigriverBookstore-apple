@@ -14,9 +14,6 @@ class SessionManager {
     static let shared = SessionManager()
     private static let sharedInstance: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 10
-        configuration.timeoutIntervalForResource = 10
-        configuration.httpMaximumConnectionsPerHost = 10
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         return Alamofire.SessionManager(configuration: configuration)
     }()
