@@ -6,8 +6,6 @@
 //  Copyright © 2019 Florin Uscatu. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 extension UICollectionView {
