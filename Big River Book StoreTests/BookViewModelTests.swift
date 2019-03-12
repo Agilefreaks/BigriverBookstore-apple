@@ -12,7 +12,13 @@ import XCTest
 class BookViewModelTests: XCTestCase {
     
     func testBookViewModelCreation() {
-        var book = Book(with: BookResource())
+        let bookResource = BookResource()
+        bookResource.id = "2"
+        bookResource.title = "war"
+        guard var book = Book(with: bookResource) else {
+            XCTFail()
+            return
+        }
         book.title = "War and Peace"
         book.author = "Leo Tolstoy"
         book.imageUrl = "www.flickr.com/flower"

@@ -36,7 +36,17 @@ class BookListViewModelTests: XCTestCase {
         }
         let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
         XCTAssert(result == .completed)
-        XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)), "Book at index path")
+        XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)))
+    }
+    
+    func testBookIdAtIndexPath() {
+        let exp = expectation(description: "return books")
+        bookListViewModel.getBooks { (error) in
+            exp.fulfill()
+        }
+        let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
+        XCTAssert(result == .completed)
+        XCTAssertNotNil(bookListViewModel.bookId(at: IndexPath(item: 1, section: 0)))
     }
     
     func testGetBooks() {
@@ -54,7 +64,11 @@ class BookListViewModelTests: XCTestCase {
 
 class MockBookRepository: BookRepositoryProtocol {
     func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        block([Book(with: BookResource()), Book(with: BookResource()), Book(with: BookResource())], nil)
+        let bookResource = BookResource()
+        bookResource.id = "2"
+        bookResource.title = "war"
+        guard let book = Book(with: bookResource) else { return }
+        block([book, book, book], nil)
     }
 }
 
