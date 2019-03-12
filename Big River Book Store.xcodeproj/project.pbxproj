@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39BED8835D4137C4559362C8 /* Pods_Big_River_Book_StoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F424E891940CF41B6A0A33D8 /* Pods_Big_River_Book_StoreTests.framework */; };
 		9F453689223656D100490AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F453688223656D100490AFB /* AppDelegate.swift */; };
 		9F45368B223656D100490AFB /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F45368A223656D100490AFB /* BookListViewController.swift */; };
 		9F45368E223656D100490AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F45368C223656D100490AFB /* Main.storyboard */; };
 		9F453690223656D400490AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F45368F223656D400490AFB /* Assets.xcassets */; };
 		9F453693223656D400490AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F453691223656D400490AFB /* LaunchScreen.storyboard */; };
-		9F45369E223656D400490AFB /* Big_River_Book_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */; };
 		9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */; };
 		9F4536B122365A0D00490AFB /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */; };
 		9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B322365ACB00490AFB /* NibLoadableView.swift */; };
 		9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B522365ADA00490AFB /* ReusableView.swift */; };
 		9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */; };
 		9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BA223667DC00490AFB /* Storyboarded.swift */; };
+		9F4536BE22367C3900490AFB /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BD22367C3900490AFB /* SessionManager.swift */; };
+		9F4536C022367C9D00490AFB /* URLCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536BF22367C9D00490AFB /* URLCreator.swift */; };
+		9F4536C4223686D800490AFB /* BookResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536C3223686D800490AFB /* BookResource.swift */; };
+		9F4536C6223687CF00490AFB /* AuthorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536C5223687CF00490AFB /* AuthorResource.swift */; };
+		9F4536C8223687D600490AFB /* PhotoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536C7223687D600490AFB /* PhotoResource.swift */; };
+		9F4536CC2236880C00490AFB /* StoreResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536CB2236880C00490AFB /* StoreResource.swift */; };
+		9F4536D32236923600490AFB /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D22236923600490AFB /* BookListViewModel.swift */; };
+		9F4536D52236957300490AFB /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D42236957300490AFB /* CustomError.swift */; };
+		9F4536D72236960600490AFB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D62236960600490AFB /* UIViewController+Extension.swift */; };
+		9F4536D9223696DC00490AFB /* BookListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */; };
+		9F4536DB22369B4E00490AFB /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536DA22369B4E00490AFB /* BookViewModel.swift */; };
+		9F4536DD22379F6B00490AFB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536DC22379F6B00490AFB /* Repository.swift */; };
+		9F4536DF2237A3FB00490AFB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536DE2237A3FB00490AFB /* Book.swift */; };
+		9F4536E32237AE6B00490AFB /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536E22237AE6B00490AFB /* BookRepository.swift */; };
+		9F4536E52237CF3500490AFB /* BookViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536E42237CF3500490AFB /* BookViewModelTests.swift */; };
+		9F4536E72237DE4F00490AFB /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536E62237DE4F00490AFB /* UICollectionViewCell+Extension.swift */; };
+		9F4536E92237E00400490AFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536E82237E00400490AFB /* UIImageView+Extension.swift */; };
+		F2C6B44D3748755E68FE3957 /* Pods_Big_River_Book_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FA67D7DB6930AD2248F778 /* Pods_Big_River_Book_Store.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E26C428E161D4FE2CCA4BAB /* Pods-Big River Book Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big River Book Store.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Big River Book Store/Pods-Big River Book Store.debug.xcconfig"; sourceTree = "<group>"; };
+		5C8086020E6EC259C273E81D /* Pods-Big River Book StoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big River Book StoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Big River Book StoreTests/Pods-Big River Book StoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		86FA67D7DB6930AD2248F778 /* Pods_Big_River_Book_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Big_River_Book_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F453685223656D100490AFB /* Big River Book Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big River Book Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F453688223656D100490AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F45368A223656D100490AFB /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +61,6 @@
 		9F453692223656D400490AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F453694223656D400490AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F453699223656D400490AFB /* Big River Book StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Big River Book StoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Big_River_Book_StoreTests.swift; sourceTree = "<group>"; };
 		9F45369F223656D400490AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4536AE22365A0D00490AFB /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F4536AF22365A0D00490AFB /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -48,6 +68,26 @@
 		9F4536B522365ADA00490AFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		9F4536BA223667DC00490AFB /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		9F4536BD22367C3900490AFB /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		9F4536BF22367C9D00490AFB /* URLCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCreator.swift; sourceTree = "<group>"; };
+		9F4536C3223686D800490AFB /* BookResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResource.swift; sourceTree = "<group>"; };
+		9F4536C5223687CF00490AFB /* AuthorResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorResource.swift; sourceTree = "<group>"; };
+		9F4536C7223687D600490AFB /* PhotoResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResource.swift; sourceTree = "<group>"; };
+		9F4536CB2236880C00490AFB /* StoreResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreResource.swift; sourceTree = "<group>"; };
+		9F4536D22236923600490AFB /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
+		9F4536D42236957300490AFB /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		9F4536D62236960600490AFB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelTests.swift; sourceTree = "<group>"; };
+		9F4536DA22369B4E00490AFB /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		9F4536DC22379F6B00490AFB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9F4536DE2237A3FB00490AFB /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		9F4536E22237AE6B00490AFB /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		9F4536E42237CF3500490AFB /* BookViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModelTests.swift; sourceTree = "<group>"; };
+		9F4536E62237DE4F00490AFB /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		9F4536E82237E00400490AFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		CBB6D8DE47B345B90FA93376 /* Pods-Big River Book Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big River Book Store.release.xcconfig"; path = "Pods/Target Support Files/Pods-Big River Book Store/Pods-Big River Book Store.release.xcconfig"; sourceTree = "<group>"; };
+		DCF2DD1CF9EC85BAA839C43E /* Pods-Big River Book StoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big River Book StoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Big River Book StoreTests/Pods-Big River Book StoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F424E891940CF41B6A0A33D8 /* Pods_Big_River_Book_StoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Big_River_Book_StoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C6B44D3748755E68FE3957 /* Pods_Big_River_Book_Store.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,18 +103,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BED8835D4137C4559362C8 /* Pods_Big_River_Book_StoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A29780D3432A769A2AAF37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E26C428E161D4FE2CCA4BAB /* Pods-Big River Book Store.debug.xcconfig */,
+				CBB6D8DE47B345B90FA93376 /* Pods-Big River Book Store.release.xcconfig */,
+				DCF2DD1CF9EC85BAA839C43E /* Pods-Big River Book StoreTests.debug.xcconfig */,
+				5C8086020E6EC259C273E81D /* Pods-Big River Book StoreTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F45367C223656D100490AFB = {
 			isa = PBXGroup;
 			children = (
 				9F453687223656D100490AFB /* Big River Book Store */,
 				9F45369C223656D400490AFB /* Big River Book StoreTests */,
 				9F453686223656D100490AFB /* Products */,
+				19A29780D3432A769A2AAF37 /* Pods */,
+				AA02C90E88FB25C846211C8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +144,11 @@
 		9F453687223656D100490AFB /* Big River Book Store */ = {
 			isa = PBXGroup;
 			children = (
+				9F4536BC22367C1C00490AFB /* Networking */,
 				9F4536B222365ABC00490AFB /* Helpers */,
 				9F4536AD2236588D00490AFB /* Models */,
 				9F4536AC2236588700490AFB /* Cells */,
+				9F4536D12236921D00490AFB /* ViewModels */,
 				9F4536AB2236587F00490AFB /* ViewControllers */,
 				9F4536AA2236586E00490AFB /* Project files */,
 				9F4536A92236585E00490AFB /* Storyboards */,
@@ -103,7 +160,8 @@
 		9F45369C223656D400490AFB /* Big River Book StoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				9F45369D223656D400490AFB /* Big_River_Book_StoreTests.swift */,
+				9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */,
+				9F4536E42237CF3500490AFB /* BookViewModelTests.swift */,
 				9F45369F223656D400490AFB /* Info.plist */,
 			);
 			path = "Big River Book StoreTests";
@@ -155,6 +213,8 @@
 		9F4536AD2236588D00490AFB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F4536E12237AD8700490AFB /* Resources */,
+				9F4536DE2237A3FB00490AFB /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +226,7 @@
 				9F4536B322365ACB00490AFB /* NibLoadableView.swift */,
 				9F4536B522365ADA00490AFB /* ReusableView.swift */,
 				9F4536BA223667DC00490AFB /* Storyboarded.swift */,
+				9F4536D42236957300490AFB /* CustomError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -174,8 +235,51 @@
 			isa = PBXGroup;
 			children = (
 				9F4536B822365B4300490AFB /* UICollectionView+Extension.swift */,
+				9F4536D62236960600490AFB /* UIViewController+Extension.swift */,
+				9F4536E62237DE4F00490AFB /* UICollectionViewCell+Extension.swift */,
+				9F4536E82237E00400490AFB /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F4536BC22367C1C00490AFB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536BD22367C3900490AFB /* SessionManager.swift */,
+				9F4536BF22367C9D00490AFB /* URLCreator.swift */,
+				9F4536DC22379F6B00490AFB /* Repository.swift */,
+				9F4536E22237AE6B00490AFB /* BookRepository.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F4536D12236921D00490AFB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536D22236923600490AFB /* BookListViewModel.swift */,
+				9F4536DA22369B4E00490AFB /* BookViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9F4536E12237AD8700490AFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F4536C3223686D800490AFB /* BookResource.swift */,
+				9F4536C5223687CF00490AFB /* AuthorResource.swift */,
+				9F4536C7223687D600490AFB /* PhotoResource.swift */,
+				9F4536CB2236880C00490AFB /* StoreResource.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA02C90E88FB25C846211C8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86FA67D7DB6930AD2248F778 /* Pods_Big_River_Book_Store.framework */,
+				F424E891940CF41B6A0A33D8 /* Pods_Big_River_Book_StoreTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F4536A2223656D400490AFB /* Build configuration list for PBXNativeTarget "Big River Book Store" */;
 			buildPhases = (
+				08934F2EF1D60324681F4D78 /* [CP] Check Pods Manifest.lock */,
+				9F4536EB2237E8B900490AFB /* ShellScript */,
 				9F453681223656D100490AFB /* Sources */,
 				9F453682223656D100490AFB /* Frameworks */,
 				9F453683223656D100490AFB /* Resources */,
+				6EF194089E6551927D561731 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F4536A5223656D400490AFB /* Build configuration list for PBXNativeTarget "Big River Book StoreTests" */;
 			buildPhases = (
+				4EFE43B02E62D998E7874F32 /* [CP] Check Pods Manifest.lock */,
 				9F453695223656D400490AFB /* Sources */,
 				9F453696223656D400490AFB /* Frameworks */,
 				9F453697223656D400490AFB /* Resources */,
@@ -275,17 +383,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08934F2EF1D60324681F4D78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Big River Book Store-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EFE43B02E62D998E7874F32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Big River Book StoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EF194089E6551927D561731 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Big River Book Store/Pods-Big River Book Store-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Vox/Vox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Big River Book Store/Pods-Big River Book Store-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F4536EB2237E8B900490AFB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/Big River Book Store\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F453681223656D100490AFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4536C8223687D600490AFB /* PhotoResource.swift in Sources */,
+				9F4536D32236923600490AFB /* BookListViewModel.swift in Sources */,
 				9F4536B922365B4300490AFB /* UICollectionView+Extension.swift in Sources */,
 				9F4536B422365ACB00490AFB /* NibLoadableView.swift in Sources */,
 				9F4536B622365ADA00490AFB /* ReusableView.swift in Sources */,
+				9F4536DB22369B4E00490AFB /* BookViewModel.swift in Sources */,
+				9F4536D52236957300490AFB /* CustomError.swift in Sources */,
 				9F4536B022365A0D00490AFB /* BookCollectionViewCell.swift in Sources */,
+				9F4536C022367C9D00490AFB /* URLCreator.swift in Sources */,
+				9F4536D72236960600490AFB /* UIViewController+Extension.swift in Sources */,
 				9F45368B223656D100490AFB /* BookListViewController.swift in Sources */,
+				9F4536E32237AE6B00490AFB /* BookRepository.swift in Sources */,
+				9F4536CC2236880C00490AFB /* StoreResource.swift in Sources */,
 				9F453689223656D100490AFB /* AppDelegate.swift in Sources */,
+				9F4536DF2237A3FB00490AFB /* Book.swift in Sources */,
+				9F4536DD22379F6B00490AFB /* Repository.swift in Sources */,
+				9F4536C6223687CF00490AFB /* AuthorResource.swift in Sources */,
+				9F4536BE22367C3900490AFB /* SessionManager.swift in Sources */,
+				9F4536E92237E00400490AFB /* UIImageView+Extension.swift in Sources */,
+				9F4536E72237DE4F00490AFB /* UICollectionViewCell+Extension.swift in Sources */,
+				9F4536C4223686D800490AFB /* BookResource.swift in Sources */,
 				9F4536BB223667DC00490AFB /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +507,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F45369E223656D400490AFB /* Big_River_Book_StoreTests.swift in Sources */,
+				9F4536E52237CF3500490AFB /* BookViewModelTests.swift in Sources */,
+				9F4536D9223696DC00490AFB /* BookListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +660,13 @@
 		};
 		9F4536A3223656D400490AFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E26C428E161D4FE2CCA4BAB /* Pods-Big River Book Store.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CEQW7LX82;
 				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,11 +680,13 @@
 		};
 		9F4536A4223656D400490AFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB6D8DE47B345B90FA93376 /* Pods-Big River Book Store.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8CEQW7LX82;
 				INFOPLIST_FILE = "Big River Book Store/Project files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +700,7 @@
 		};
 		9F4536A6223656D400490AFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF2DD1CF9EC85BAA839C43E /* Pods-Big River Book StoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +722,7 @@
 		};
 		9F4536A7223656D400490AFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8086020E6EC259C273E81D /* Pods-Big River Book StoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -9,11 +9,15 @@
 import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private var bookCoverImageView: UIImageView!
+    @IBOutlet private var bookTitleLabel: UILabel!
+    @IBOutlet private var bookAuthorLabel: UILabel!
+    @IBOutlet private var bgView: UIView!
 
-    @IBOutlet private weak var bookCoverImageView: UIImageView!
-    @IBOutlet private weak var bookTitleLabel: UILabel!
-    @IBOutlet private weak var bookAuthorLabel: UILabel!
-    @IBOutlet private weak var bgView: UIView!
+    func configure(with viewModel: BookViewModel) {
+        bookTitleLabel.text = viewModel.title
+        bookAuthorLabel.text = viewModel.author
+        guard let imageURL = viewModel.mainPhotoURL, let url = URL(string: imageURL) else { return }
+        bookCoverImageView.setImage(with: url)
+    }
 }
-
-extension BookCollectionViewCell: NibLoadableView, ReusableView {}

@@ -10,23 +10,25 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     var navigationController: UINavigationController?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if let _ = NSClassFromString("XCTest") {
+            return true
+        }
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        
+
         if let window = window {
             let mainViewController = BookListViewController.getInstance()
+            let mainViewModel = BookListViewModel()
+            mainViewController.viewModel = mainViewModel
             navigationController = UINavigationController(rootViewController: mainViewController)
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
-        
+
         return true
     }
-
 }
-
