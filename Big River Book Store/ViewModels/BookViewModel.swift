@@ -10,11 +10,11 @@ import Foundation
 
 class BookViewModel {
     private var book: Book!
-    
+
     var title: String { return book.title }
     var author: String { return book.author }
     var mainPhotoURL: String? { return book.imageUrl }
-    
+
     init(with book: Book) {
         self.book = book
     }

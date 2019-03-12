@@ -20,12 +20,12 @@ extension UICollectionView {
             register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
         }
     }
-    
+
     func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
             fatalError("Not able to deque a cell")
         }
-        
+
         return cell
     }
 }

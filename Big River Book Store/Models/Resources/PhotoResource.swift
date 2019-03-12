@@ -10,15 +10,16 @@ import Foundation
 import Vox
 
 class PhotoResource: Resource {
-    
     // MARK: - Attributes
+
     @objc dynamic
     var title: String?
-    
+
     @objc dynamic
     var uri: String?
-    
+
     // MARK: - Resource type
+
     override class var resourceType: String {
         return "photos"
     }

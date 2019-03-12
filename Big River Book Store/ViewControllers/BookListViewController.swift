@@ -9,9 +9,9 @@
 import UIKit
 
 class BookListViewController: UIViewController {
-
     // MARK: - IBOutlets
-    @IBOutlet private weak var collectionView: UICollectionView! {
+
+    @IBOutlet private var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
@@ -19,28 +19,32 @@ class BookListViewController: UIViewController {
             collectionView.register(BookCollectionViewCell.self)
         }
     }
-    
+
     // MARK: - Variables
+
     var viewModel: BookListViewModel!
-    
+
     // MARK: - Constants
+
     let collectionViewCellInset: CGFloat = 30.0
     let numberOfCellsPerRow: CGFloat = 2.0
     let collectionViewCellAspectRatio: CGFloat = 1.5
     let collectionViewEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    
+
     // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    
+
     // MARK: - Setup
+
     private func setup() {
         title = "BigRiver Bookstore"
         getBooks()
     }
-    
+
     private func getBooks() {
         viewModel.getBooks { [weak self] error in
             guard let strongSelf = self else { return }
@@ -54,10 +58,10 @@ class BookListViewController: UIViewController {
 }
 
 extension BookListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return viewModel.numberOfBooks()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BookCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         if let bookViewModel = viewModel.bookViewModel(at: indexPath) {
@@ -68,7 +72,7 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
 }
 
 extension BookListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
         let width = (collectionView.frame.size.width - collectionViewCellInset) / numberOfCellsPerRow
         let height = width * collectionViewCellAspectRatio
         return CGSize(width: width, height: height)

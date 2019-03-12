@@ -13,11 +13,15 @@ struct Book {
     var title: String
     var author: String
     var imageUrl: String
-    
-    init(with bookResource: BookResource) {
-        self.id = bookResource.id ?? ""
-        self.title = bookResource.title ?? ""
-        self.author = bookResource.author?.name ?? ""
-        self.imageUrl = bookResource.photos?.first?.uri ?? ""
+
+    init?(with bookResource: BookResource) {
+        guard let id = bookResource.id,
+            let title = bookResource.title else {
+            return nil
+        }
+        self.id = id
+        self.title = title
+        author = bookResource.author?.name ?? ""
+        imageUrl = bookResource.photos?.first?.uri ?? ""
     }
 }

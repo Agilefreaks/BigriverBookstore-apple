@@ -10,36 +10,39 @@ import Foundation
 import Vox
 
 class BookResource: Resource {
-    
     // MARK: - Attributes
+
     @objc dynamic
     var title: String?
-    
+
     @objc dynamic
     var datePublished: String?
-    
+
     @objc dynamic
     var isbn: NSNumber?
-    
+
     // MARK: - Relationships
+
     @objc dynamic
     var author: AuthorResource?
-    
+
     @objc dynamic
     var photos: [PhotoResource]?
-    
+
     @objc dynamic
     var stores: [StoreResource]?
-    
+
     // MARK: - Resource type
+
     override class var resourceType: String {
         return "books"
     }
-    
+
     // MARK: - CodingKeys
-    override class var codingKeys: [String : String] {
+
+    override class var codingKeys: [String: String] {
         return [
-            "date_published": "datePublished"
+            "date_published": "datePublished",
         ]
     }
 }

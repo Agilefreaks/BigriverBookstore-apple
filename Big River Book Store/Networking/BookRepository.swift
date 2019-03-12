@@ -10,12 +10,12 @@ import Foundation
 
 class BookRepository: BookRepositoryProtocol {
     func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        SessionManager.getResources(type: BookResource.self, path: URLCreator.books, include: ["author", "photos"]) { (resources, error) in
+        SessionManager.getResources(type: BookResource.self, path: URLCreator.books, include: ["author", "photos"]) { resources, error in
             guard error == nil, let bookResources = resources else {
                 block(nil, CustomError.generalError)
                 return
             }
-            block(bookResources.map({ Book.init(with: $0) }), nil)
+            block(bookResources.compactMap({ Book(with: $0) }), nil)
         }
     }
 }

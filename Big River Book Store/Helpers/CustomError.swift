@@ -18,6 +18,5 @@ extension CustomError: LocalizedError {
         case .generalError:
             return NSLocalizedString("Oops, something went wrong, please try again", comment: "General Error")
         }
-        
     }
 }

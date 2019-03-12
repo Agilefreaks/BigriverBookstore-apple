@@ -10,6 +10,7 @@ target 'Big River Book Store' do
   pod 'Alamofire', '4.8'
   pod 'AlamofireImage', '3.5'
   pod 'Vox/Alamofire', '1.2.1'
+  pod 'SwiftFormat/CLI'
 
   target 'Big River Book StoreTests' do
     inherit! :search_paths
