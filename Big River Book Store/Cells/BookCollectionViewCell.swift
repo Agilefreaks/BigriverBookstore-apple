@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AlamofireImage
 
 class BookCollectionViewCell: UICollectionViewCell {
 
@@ -20,8 +19,6 @@ class BookCollectionViewCell: UICollectionViewCell {
         bookTitleLabel.text = viewModel.title
         bookAuthorLabel.text = viewModel.author
         guard let imageURL = viewModel.mainPhotoURL, let url = URL(string: imageURL) else { return }
-        bookCoverImageView.af_setImage(withURL: url)
+        bookCoverImageView.setImage(with: url)
     }
 }
-
-extension BookCollectionViewCell: NibLoadableView, ReusableView {}

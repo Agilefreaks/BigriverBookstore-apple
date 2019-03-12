@@ -15,15 +15,6 @@ class AuthorResource: Resource {
     @objc dynamic
     var name: String?
     
-    @objc dynamic
-    var birthplace: String?
-    
-    @objc dynamic
-    var dateOfBirth: String?
-    
-    @objc dynamic
-    var dateOfDeath: String?
-    
     // MARK: - Relationships
     @objc dynamic
     var photos: [PhotoResource]?
@@ -34,13 +25,5 @@ class AuthorResource: Resource {
     // MARK: - Resource type
     override class var resourceType: String {
         return "authors"
-    }
-    
-    // MARK: - CodingKeys
-    override class var codingKeys: [String : String] {
-        return [
-            "date_of_birth": "dateOfBirth",
-            "date_of_death": "dateOfDeath"
-        ]
     }
 }

@@ -26,13 +26,7 @@ class BookResource: Resource {
     var author: AuthorResource?
     
     @objc dynamic
-    var chapters: [ChapterResource]?
-    
-    @objc dynamic
     var photos: [PhotoResource]?
-    
-    @objc dynamic
-    var series: SerieResource?
     
     @objc dynamic
     var stores: [StoreResource]?

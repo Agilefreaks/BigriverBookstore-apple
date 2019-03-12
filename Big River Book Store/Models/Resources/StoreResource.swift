@@ -28,9 +28,6 @@ class StoreResource: Resource {
     @objc dynamic
     var books: BookResource?
     
-    @objc dynamic
-    var countries: CountryResource?
-    
     // MARK: - Resource type
     override class var resourceType: String {
         return "stores"
