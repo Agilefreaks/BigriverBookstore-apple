@@ -1,5 +1,5 @@
 //
-//  Store.swift
+//  Author.swift
 //  Big River Book Store
 //
 //  Created by Florin Uscatu on 11/03/2019.
@@ -9,37 +9,38 @@
 import Foundation
 import Vox
 
-class Store: Resource {
+class AuthorResource: Resource {
     
     // MARK: - Attributes
     @objc dynamic
     var name: String?
     
     @objc dynamic
-    var address: String?
+    var birthplace: String?
     
     @objc dynamic
-    var createdBy: NSNumber?
+    var dateOfBirth: String?
+    
+    @objc dynamic
+    var dateOfDeath: String?
     
     // MARK: - Relationships
     @objc dynamic
-    var photos: Photo?
+    var photos: [PhotoResource]?
     
     @objc dynamic
-    var books: Book?
-    
-    @objc dynamic
-    var countries: Country?
+    var books: [BookResource]?
     
     // MARK: - Resource type
     override class var resourceType: String {
-        return "stores"
+        return "authors"
     }
     
     // MARK: - CodingKeys
     override class var codingKeys: [String : String] {
         return [
-            "created_by": "createdBy"
+            "date_of_birth": "dateOfBirth",
+            "date_of_death": "dateOfDeath"
         ]
     }
 }

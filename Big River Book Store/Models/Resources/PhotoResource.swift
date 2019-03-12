@@ -1,5 +1,5 @@
 //
-//  Chapter.swift
+//  Photo.swift
 //  Big River Book Store
 //
 //  Created by Florin Uscatu on 11/03/2019.
@@ -9,24 +9,17 @@
 import Foundation
 import Vox
 
-class Chapter: Resource {
+class PhotoResource: Resource {
     
     // MARK: - Attributes
     @objc dynamic
     var title: String?
     
     @objc dynamic
-    var ordering: NSNumber?
-    
-    // MARK: - Relationships
-    @objc dynamic
-    var photos: [Photo]?
-    
-    @objc dynamic
-    var book: Book?
+    var uri: String?
     
     // MARK: - Resource type
     override class var resourceType: String {
-        return "chapters"
+        return "photos"
     }
 }

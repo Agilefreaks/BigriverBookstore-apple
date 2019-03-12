@@ -21,7 +21,7 @@ class BookListViewController: UIViewController {
     }
     
     // MARK: - Variables
-    var viewModel: BookListViewModel?
+    var viewModel: BookListViewModel!
     
     // MARK: - Constants
     let collectionViewCellInset: CGFloat = 30.0
@@ -42,7 +42,7 @@ class BookListViewController: UIViewController {
     }
     
     private func getBooks() {
-        viewModel?.getBooks { [weak self] error in
+        viewModel.getBooks { [weak self] error in
             guard let strongSelf = self else { return }
             guard error == nil else {
                 strongSelf.presentAlert(with: "Error", message: error!.localizedDescription)
@@ -55,13 +55,13 @@ class BookListViewController: UIViewController {
 
 extension BookListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.numberOfBooks() ?? 0
+        return viewModel.numberOfBooks()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BookCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        if let book = viewModel?.book(at: indexPath) {
-            cell.configure(with: BookViewModel(with: book))
+        if let bookViewModel = viewModel.bookViewModel(at: indexPath) {
+            cell.configure(with: bookViewModel)
         }
         return cell
     }

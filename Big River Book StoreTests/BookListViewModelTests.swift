@@ -11,22 +11,55 @@ import XCTest
 
 class BookListViewModelTests: XCTestCase {
 
+    var bookListViewModel: BookListViewModel!
+    var bookListViewModelWithError: BookListViewModel!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        bookListViewModel = BookListViewModel.init(repository: MockBookRepository())
+        bookListViewModelWithError = BookListViewModel.init(repository: MockBookRepositoryWithError())
     }
     
-    let bookListViewModel = BookListViewModel.init(books: [Book(), Book(), Book()])
-
     func testReturnNumberOfBooks() {
+        let exp = expectation(description: "return books")
+        bookListViewModel.getBooks { (error) in
+            exp.fulfill()
+        }
+        let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
+        XCTAssert(result == .completed)
         XCTAssertEqual(3, bookListViewModel.numberOfBooks())
     }
     
     func testBookAtIndexPath() {
-        XCTAssertNotNil(bookListViewModel.book(at: IndexPath(item: 1, section: 0)), "Book at index path")
+        let exp = expectation(description: "return books")
+        bookListViewModel.getBooks { (error) in
+            exp.fulfill()
+        }
+        let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
+        XCTAssert(result == .completed)
+        XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)), "Book at index path")
     }
+    
+    func testGetBooks() {
+        bookListViewModel.getBooks { (error) in
+            XCTAssert(error == nil)
+        }
+    }
+    
+    func testGetBooksWithError() {
+        bookListViewModelWithError.getBooks { (error) in
+            XCTAssert(error != nil)
+        }
+    }
+}
 
+class MockBookRepository: BookRepositoryProtocol {
+    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
+        block([Book(with: BookResource()), Book(with: BookResource()), Book(with: BookResource())], nil)
+    }
+}
+
+class MockBookRepositoryWithError: BookRepositoryProtocol {
+    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
+        block(nil, CustomError.generalError)
+    }
 }

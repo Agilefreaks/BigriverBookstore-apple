@@ -1,5 +1,5 @@
 //
-//  Serie.swift
+//  Country.swift
 //  Big River Book Store
 //
 //  Created by Florin Uscatu on 11/03/2019.
@@ -9,21 +9,14 @@
 import Foundation
 import Vox
 
-class Serie: Resource {
+class CountryResource: Resource {
     
     // MARK: - Attributes
     @objc dynamic
-    var title: String?
-    
-    // MARK: - Relationships
-    @objc dynamic
-    var photos: [Photo]?
-    
-    @objc dynamic
-    var books: [Book]?
+    var name: String?
     
     // MARK: - Resource type
     override class var resourceType: String {
-        return "series"
+        return "countries"
     }
 }

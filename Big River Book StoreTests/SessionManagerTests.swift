@@ -19,9 +19,9 @@ class SessionManagerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testGettingBooksData() {
+    func testGettingBookResourcesData() {
         let exp = expectation(description: "Expecting JSON data not to be nil")
-        SessionManager.getBooks { (data, error) in
+        SessionManager.getResources(type: BookResource.self, path: URLCreator.books, include: ["author", "photos"]) { (data, error) in
             XCTAssertNil(error)
             XCTAssertNotNil(data)
             exp.fulfill()
@@ -31,5 +31,4 @@ class SessionManagerTests: XCTestCase {
             XCTFail("error: \(error.localizedDescription)")
         }
     }
-
 }

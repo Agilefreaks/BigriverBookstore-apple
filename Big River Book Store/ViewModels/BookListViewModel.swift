@@ -11,41 +11,36 @@ import Foundation
 class BookListViewModel {
     
     // MARK: - Variables
-    private var books: [Book]?
+    private var books: [Book] = []
+    private let repository: BookRepositoryProtocol
     
     // MARK: - Lifecycle
-    init() {}
-    
-    init(books: [Book]) {
-        self.books = books
+    init(repository: BookRepositoryProtocol = BookRepository()) {
+        self.repository = repository
     }
     
     // MARK: - Helpers
     func getBooks(completion block: @escaping (Error?) -> Void) {
-        SessionManager.getBooks { [weak self] (books, error) in
-            guard error == nil else {
-                block(error)
-                return
-            }
-            guard let books = books else {
-                block(CustomError.generalError)
-                return
-            }
+        repository.getAll { [weak self] (books, error) in
             guard let strongSelf = self else {
                 block(CustomError.generalError)
                 return
             }
-            strongSelf.books = books
+            guard error == nil else {
+                block(error)
+                return
+            }
+            strongSelf.books = books ?? []
             block(nil)
         }
     }
     
     func numberOfBooks() -> Int {
-        return books?.count ?? 0
+        return books.count
     }
     
-    func book(at indexPath: IndexPath) -> Book? {
-        guard let books = books else { return nil }
-        return books[indexPath.row]
+    func bookViewModel(at indexPath: IndexPath) -> BookViewModel? {
+        guard books.count > indexPath.item else { return nil }
+        return BookViewModel(with: books[indexPath.row])
     }
 }

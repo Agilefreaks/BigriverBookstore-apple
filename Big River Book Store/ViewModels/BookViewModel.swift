@@ -11,24 +11,9 @@ import Foundation
 class BookViewModel {
     private var book: Book!
     
-    var title: String {
-        get {
-            guard let title = book.title else { return "" }
-            return title
-        }
-    }
-    var author: String {
-        get {
-            guard let author = book.author?.name else { return "" }
-            return author
-        }
-    }
-    var mainPhotoURL: String? {
-        get {
-            guard let photos = book.photos else { return nil }
-            return photos.first?.uri
-        }
-    }
+    var title: String { return book.title }
+    var author: String { return book.author }
+    var mainPhotoURL: String? { return book.imageUrl }
     
     init(with book: Book) {
         self.book = book
