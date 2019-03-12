@@ -13,7 +13,7 @@ class BookViewModel {
 
     var title: String { return book.title }
     var author: String { return book.author }
-    var mainPhotoURL: String? { return book.imageUrl }
+    var mainPhotoURL: String? { return book.imageUrls.first }
 
     init(with book: Book) {
         self.book = book

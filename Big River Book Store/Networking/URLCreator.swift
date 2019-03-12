@@ -14,7 +14,7 @@ enum URLCreator {
     static let books = "/books"
     static let photots = "/photos"
 
-    static func author(with id: String) -> String {
-        return authors + "/" + id
+    static func book(with id: String) -> String {
+        return books + "/" + id
     }
 }

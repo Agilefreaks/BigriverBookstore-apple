@@ -51,5 +51,61 @@
             </objects>
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="l6z-py-P84">
+            <objects>
+                <viewController storyboardIdentifier="BookDetailViewController" id="tuo-Pi-tCL" customClass="BookDetailViewController" customModule="Big_River_Book_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4A-4v-f3r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-w4-TVi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="jVB-NU-Ty5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="S7y-7s-57W">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tuo-Pi-tCL" id="3dB-LP-91L"/>
+                                    <outlet property="delegate" destination="tuo-Pi-tCL" id="emG-Nm-vIa"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fda-qo-3bk">
+                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tuo-Pi-tCL" id="9Kc-xn-mop"/>
+                                    <outlet property="delegate" destination="tuo-Pi-tCL" id="w1k-ZG-5jp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GPA-w4-TVi" firstAttribute="leading" secondItem="Wnn-ac-caB" secondAttribute="leading" id="0fx-F4-bnf"/>
+                            <constraint firstItem="Fda-qo-3bk" firstAttribute="trailing" secondItem="Wnn-ac-caB" secondAttribute="trailing" id="37o-wG-nKF"/>
+                            <constraint firstItem="Fda-qo-3bk" firstAttribute="top" secondItem="GPA-w4-TVi" secondAttribute="bottom" id="Hr5-hc-JTi"/>
+                            <constraint firstItem="Fda-qo-3bk" firstAttribute="leading" secondItem="Wnn-ac-caB" secondAttribute="leading" id="JPe-c3-gyR"/>
+                            <constraint firstItem="GPA-w4-TVi" firstAttribute="top" secondItem="Wnn-ac-caB" secondAttribute="top" id="V4T-No-aEK"/>
+                            <constraint firstItem="GPA-w4-TVi" firstAttribute="trailing" secondItem="Wnn-ac-caB" secondAttribute="trailing" id="qbG-pM-BN0"/>
+                            <constraint firstItem="Fda-qo-3bk" firstAttribute="bottom" secondItem="Wnn-ac-caB" secondAttribute="bottom" id="yKu-FU-ZWM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wnn-ac-caB"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="GPA-w4-TVi" id="ALU-Vh-DnC"/>
+                        <outlet property="tableView" destination="Fda-qo-3bk" id="P0d-Ds-IF2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVW-ny-ow3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.8" y="133.5832083958021"/>
+        </scene>
     </scenes>
 </document>

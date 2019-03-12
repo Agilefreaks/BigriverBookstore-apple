@@ -25,9 +25,31 @@ class SessionManager {
         do {
             try dataSource.fetch()
                 .include(include)
-                .result({ (document: Document<[T]>) in
+                .result({ document in
                     guard let resources = document.data else { return }
                     block(resources, nil)
+                }, { error in
+                    block(nil, error)
+                })
+        } catch let error {
+            block(nil, error)
+        }
+    }
+
+    static func getResource<T: Resource>(type _: T.Type, path: String, id: String, include: [String], completion block: @escaping (T?, Error?) -> Void) {
+        guard let url = URL(string: URLCreator.baseURL) else { return }
+        let client = JSONAPIClient.Alamofire(baseURL: url)
+        let dataSource = DataSource<T>(strategy: .path(path), client: client)
+        do {
+            try dataSource.fetch(id: id)
+                .include(include)
+                .result({ document in
+                    guard let resource = document.data else {
+                        print("--- Error: data came back nil ---")
+                        block(nil, CustomError.generalError)
+                        return
+                    }
+                    block(resource, nil)
                 }, { error in
                     block(nil, error)
                 })

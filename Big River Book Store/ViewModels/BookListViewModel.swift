@@ -45,4 +45,9 @@ class BookListViewModel {
         guard books.count > indexPath.item else { return nil }
         return BookViewModel(with: books[indexPath.row])
     }
+
+    func bookId(at indexPath: IndexPath) -> String? {
+        guard books.count > indexPath.item else { return nil }
+        return books[indexPath.row].id
+    }
 }

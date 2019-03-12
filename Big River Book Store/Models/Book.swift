@@ -12,7 +12,7 @@ struct Book {
     var id: String
     var title: String
     var author: String
-    var imageUrl: String
+    var imageUrls: [String]
 
     init?(with bookResource: BookResource) {
         guard let id = bookResource.id,
@@ -22,6 +22,10 @@ struct Book {
         self.id = id
         self.title = title
         author = bookResource.author?.name ?? ""
-        imageUrl = bookResource.photos?.first?.uri ?? ""
+        if let photos = bookResource.photos {
+            imageUrls = photos.compactMap({ $0.uri })
+        } else {
+            imageUrls = []
+        }
     }
 }

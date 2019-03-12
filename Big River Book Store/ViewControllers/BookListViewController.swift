@@ -69,6 +69,14 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
         }
         return cell
     }
+
+    func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let id = viewModel.bookId(at: indexPath) else { return }
+        let detailViewController = BookDetailViewController.getInstance()
+        let detailViewModel = BookDetailViewModel(with: id)
+        detailViewController.viewModel = detailViewModel
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
 extension BookListViewController: UICollectionViewDelegateFlowLayout {
