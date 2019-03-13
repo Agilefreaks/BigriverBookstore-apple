@@ -49,14 +49,19 @@ class BookDetailViewController: UIViewController {
                 strongSelf.presentAlert(with: "Error", message: error!.localizedDescription)
                 return
             }
-            DispatchQueue.main.async {
-                strongSelf.tableView.reloadData()
-                strongSelf.title = strongSelf.viewModel.nameOfBook() ?? ""
-                if strongSelf.viewModel.numberOfPhotos() > 0 {
-                    strongSelf.collectionView.reloadData()
-                } else {
-                    strongSelf.collectionViewHeightConstraint.constant = 0
-                }
+            strongSelf.reload()
+        }
+    }
+
+    private func reload() {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.tableView.reloadData()
+            strongSelf.title = strongSelf.viewModel.nameOfBook() ?? ""
+            if strongSelf.viewModel.numberOfPhotos() > 0 {
+                strongSelf.collectionView.reloadData()
+            } else {
+                strongSelf.collectionViewHeightConstraint.constant = 0
             }
         }
     }
