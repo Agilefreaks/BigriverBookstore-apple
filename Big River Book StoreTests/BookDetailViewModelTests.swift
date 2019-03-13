@@ -26,7 +26,7 @@ class BookDetailViewModelTests: XCTestCase {
     }
     
     func testPhotoAtIndexPath_With3Photos_ReturnsNotNil() {
-        let exp = expectation(description: "return books")
+        let exp = expectation(description: "return photo at index path")
         
         bookDetailViewModel.getBook { (error) in
             exp.fulfill()
@@ -35,5 +35,17 @@ class BookDetailViewModelTests: XCTestCase {
         
         XCTAssert(result == .completed)
         XCTAssertNotNil(bookDetailViewModel.photoUrl(at: IndexPath(item: 1, section: 0)))
+    }
+    
+    func testGetBook_WithoutError_ReturnsBook() {
+        bookDetailViewModel.getBook { (error) in
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testGetBook_WithError_ReturnsErrorNotNil() {
+        bookDetailViewModelWithError.getBook { (error) in
+            XCTAssertNotNil(error)
+        }
     }
 }
