@@ -42,6 +42,7 @@ class BookListViewController: UIViewController {
 
     private func setup() {
         title = "BigRiver Bookstore"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         getBooks()
     }
 

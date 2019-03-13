@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let mainViewModel = BookListViewModel()
             mainViewController.viewModel = mainViewModel
             navigationController = UINavigationController(rootViewController: mainViewController)
+            navigationController?.navigationBar.tintColor = .black
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }

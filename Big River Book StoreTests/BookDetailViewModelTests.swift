@@ -48,4 +48,16 @@ class BookDetailViewModelTests: XCTestCase {
             XCTAssertNotNil(error)
         }
     }
+    
+    func testGetBookName_WithoutError_ReturnsName() {
+        let exp = expectation(description: "return photo at index path")
+        
+        bookDetailViewModel.getBook { (error) in
+            exp.fulfill()
+        }
+        let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
+        
+        XCTAssert(result == .completed)
+        XCTAssertTrue(bookDetailViewModel.nameOfBook() == "Title")
+    }
 }

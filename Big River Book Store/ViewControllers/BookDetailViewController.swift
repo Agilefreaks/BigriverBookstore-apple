@@ -50,6 +50,7 @@ class BookDetailViewController: UIViewController {
             DispatchQueue.main.async {
                 strongSelf.collectionView.reloadData()
                 strongSelf.tableView.reloadData()
+                strongSelf.title = strongSelf.viewModel.nameOfBook() ?? ""
             }
         }
     }

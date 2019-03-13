@@ -49,4 +49,9 @@ class BookDetailViewModel {
         guard let imageUrls = book?.imageUrls else { return nil }
         return imageUrls[indexPath.item]
     }
+
+    func nameOfBook() -> String? {
+        guard let book = book else { return nil }
+        return book.title
+    }
 }
