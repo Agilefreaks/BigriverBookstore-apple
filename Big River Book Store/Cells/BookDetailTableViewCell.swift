@@ -10,4 +10,8 @@ import UIKit
 
 class BookDetailTableViewCell: UITableViewCell {
     @IBOutlet private var detailLabel: UILabel!
+
+    func configure(with detail: String) {
+        detailLabel.text = detail
+    }
 }

@@ -100,6 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="GPA-w4-TVi" id="ALU-Vh-DnC"/>
+                        <outlet property="collectionViewHeightConstraint" destination="jVB-NU-Ty5" id="gjb-WV-Tfn"/>
                         <outlet property="tableView" destination="Fda-qo-3bk" id="P0d-Ds-IF2"/>
                     </connections>
                 </viewController>

@@ -20,14 +20,14 @@ class BookRepository: BookRepositoryProtocol {
         }
     }
 
-    func get(include: [String], resourceID: String, completion block: @escaping (Book?, Error?) -> Void) {
+    func get(include: [String], resourceID: String, completion block: @escaping (BookDetail?, Error?) -> Void) {
         let includeList = include.joined(separator: ",")
         SessionManager.getResource(type: BookResource.self, path: .books, includeList: includeList, resourceID: resourceID) { resource, error in
             guard error == nil, let bookResource = resource else {
                 block(nil, error)
                 return
             }
-            block(Book.from(bookResource), nil)
+            block(BookDetail.from(bookResource), nil)
         }
     }
 }

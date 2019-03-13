@@ -15,6 +15,7 @@ class BookDetailViewController: UIViewController {
 
     // MARK: - IBOutlets
 
+    @IBOutlet private var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
@@ -28,6 +29,7 @@ class BookDetailViewController: UIViewController {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.register(BookDetailTableViewCell.self)
+            tableView.tableFooterView = UIView()
         }
     }
 
@@ -48,9 +50,13 @@ class BookDetailViewController: UIViewController {
                 return
             }
             DispatchQueue.main.async {
-                strongSelf.collectionView.reloadData()
                 strongSelf.tableView.reloadData()
                 strongSelf.title = strongSelf.viewModel.nameOfBook() ?? ""
+                if strongSelf.viewModel.numberOfPhotos() > 0 {
+                    strongSelf.collectionView.reloadData()
+                } else {
+                    strongSelf.collectionViewHeightConstraint.constant = 0
+                }
             }
         }
     }
@@ -80,12 +86,16 @@ extension BookDetailViewController: UICollectionViewDelegateFlowLayout {
 
 extension BookDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 10
+        return viewModel.getCellTypesCount()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: BookDetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: viewModel.getCellDetail(for: indexPath))
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
