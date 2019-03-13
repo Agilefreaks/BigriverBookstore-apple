@@ -26,14 +26,7 @@ class BookDetailViewModelTests: XCTestCase {
     }
     
     func testPhotoAtIndexPath_With3Photos_ReturnsNotNil() {
-        let exp = expectation(description: "return photo at index path")
-        
-        bookDetailViewModel.getBook { (error) in
-            exp.fulfill()
-        }
-        let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
-        
-        XCTAssert(result == .completed)
+        getBook()
         XCTAssertNotNil(bookDetailViewModel.photoUrl(at: IndexPath(item: 1, section: 0)))
     }
     
@@ -50,7 +43,22 @@ class BookDetailViewModelTests: XCTestCase {
     }
     
     func testGetBookName_WithoutError_ReturnsName() {
-        let exp = expectation(description: "return photo at index path")
+        getBook()
+        XCTAssertTrue(bookDetailViewModel.nameOfBook() == "Title")
+    }
+    
+    func testGetCellTypesCount_With5Types_Returns5() {
+        getBook()
+        XCTAssert(bookDetailViewModel.getCellTypesCount() == 5)
+    }
+    
+    func testGetCellDetail_WithTitle_ReturnsTitle() {
+        getBook()
+        XCTAssert(bookDetailViewModel.getCellDetail(for: IndexPath(row: 0, section: 0)) == "Title: Title")
+    }
+    
+    private func getBook() {
+        let exp = expectation(description: "")
         
         bookDetailViewModel.getBook { (error) in
             exp.fulfill()
@@ -58,6 +66,5 @@ class BookDetailViewModelTests: XCTestCase {
         let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
         
         XCTAssert(result == .completed)
-        XCTAssertTrue(bookDetailViewModel.nameOfBook() == "Title")
     }
 }
