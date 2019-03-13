@@ -94,6 +94,7 @@ extension BookDetailViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: viewModel.getCellDetail(for: indexPath))
         return cell
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

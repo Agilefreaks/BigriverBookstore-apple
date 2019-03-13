@@ -9,7 +9,12 @@
 import UIKit
 
 class BookPhotoCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var imageView: UIImageView! {
+        didSet {
+            imageView.layer.cornerRadius = 5.0
+            imageView.clipsToBounds = true
+        }
+    }
 
     func configure(with imageUrl: String) {
         imageView.setImage(with: URL(string: imageUrl)!)
