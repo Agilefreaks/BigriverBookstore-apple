@@ -11,20 +11,23 @@ import XCTest
 
 class BookViewModelTests: XCTestCase {
     
-    func testBookViewModelCreation() {
-        let bookResource = BookResource()
-        bookResource.id = "2"
-        bookResource.title = "war"
-        guard var book = Book(with: bookResource) else {
-            XCTFail()
-            return
-        }
-        book.title = "War and Peace"
-        book.author = "Leo Tolstoy"
-        book.imageUrl = "www.flickr.com/flower"
-        let bookViewModel = BookViewModel(with: book)
+    var bookViewModel: BookViewModel!
+    
+    override func setUp() {
+        let book = Book(id: "42", title: "War and Peace", author: "Leo Tolstoy", imageUrls: ["www.flickr.com/flower", "www.google.com"])
+        bookViewModel = BookViewModel(with: book)
+    }
+    
+    func testBookViewModelHasTitle() {
         XCTAssert(bookViewModel.title == "War and Peace")
+    }
+    
+    func testBookViewModelHasAuthor() {
         XCTAssert(bookViewModel.author == "Leo Tolstoy")
+    }
+    
+    func testBookViewModelHasMainPhoto() {
         XCTAssert(bookViewModel.mainPhotoURL == "www.flickr.com/flower")
     }
+    
 }

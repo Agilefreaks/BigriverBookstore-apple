@@ -47,8 +47,10 @@ class BookDetailViewController: UIViewController {
                 strongSelf.presentAlert(with: "Error", message: error!.localizedDescription)
                 return
             }
-            strongSelf.collectionView.reloadData()
-            strongSelf.tableView.reloadData()
+            DispatchQueue.main.async {
+                strongSelf.collectionView.reloadData()
+                strongSelf.tableView.reloadData()
+            }
         }
     }
 }

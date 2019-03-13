@@ -16,7 +16,7 @@ class BookRepository: BookRepositoryProtocol {
                 block(nil, error)
                 return
             }
-            block(bookResources.compactMap({ Book(with: $0) }), nil)
+            block(bookResources.compactMap({ Book.from($0) }), nil)
         }
     }
 
@@ -27,7 +27,7 @@ class BookRepository: BookRepositoryProtocol {
                 block(nil, error)
                 return
             }
-            block(Book(with: bookResource), nil)
+            block(Book.from(bookResource), nil)
         }
     }
 }

@@ -13,12 +13,12 @@ class BookListViewModelTests: XCTestCase {
 
     var bookListViewModel: BookListViewModel!
     var bookListViewModelWithError: BookListViewModel!
-    
+
     override func setUp() {
         bookListViewModel = BookListViewModel.init(repository: MockBookRepository())
-        bookListViewModelWithError = BookListViewModel.init(repository: MockBookRepositoryWithError())
+        bookListViewModelWithError = BookListViewModel.init(repository: MockBookRepository(error: true))
     }
-    
+
     func testReturnNumberOfBooks() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
@@ -28,7 +28,7 @@ class BookListViewModelTests: XCTestCase {
         XCTAssert(result == .completed)
         XCTAssertEqual(3, bookListViewModel.numberOfBooks())
     }
-    
+
     func testBookAtIndexPath() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
@@ -38,7 +38,7 @@ class BookListViewModelTests: XCTestCase {
         XCTAssert(result == .completed)
         XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)))
     }
-    
+
     func testBookIdAtIndexPath() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
@@ -48,13 +48,13 @@ class BookListViewModelTests: XCTestCase {
         XCTAssert(result == .completed)
         XCTAssertNotNil(bookListViewModel.bookId(at: IndexPath(item: 1, section: 0)))
     }
-    
+
     func testGetBooks() {
         bookListViewModel.getBooks { (error) in
             XCTAssert(error == nil)
         }
     }
-    
+
     func testGetBooksWithError() {
         bookListViewModelWithError.getBooks { (error) in
             XCTAssert(error != nil)
@@ -63,17 +63,23 @@ class BookListViewModelTests: XCTestCase {
 }
 
 class MockBookRepository: BookRepositoryProtocol {
-    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        let bookResource = BookResource()
-        bookResource.id = "2"
-        bookResource.title = "war"
-        guard let book = Book(with: bookResource) else { return }
+    
+    var error: Bool!
+    
+    init(error: Bool = false) {
+        self.error = error
+    }
+    
+    func getAll(include: [String], completion block: @escaping ([Book]?, Error?) -> Void) {
+        guard !error else {
+            block(nil, CustomError.generalError)
+            return
+        }
+        let book = Book(id: "42", title: "Title", author: "author", imageUrls: [])
         block([book, book, book], nil)
     }
-}
-
-class MockBookRepositoryWithError: BookRepositoryProtocol {
-    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        block(nil, CustomError.generalError)
+    
+    func get(include: [String], resourceID: String, completion block: @escaping (Book?, Error?) -> Void) {
+        
     }
 }
