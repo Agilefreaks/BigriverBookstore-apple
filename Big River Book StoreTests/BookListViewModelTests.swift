@@ -19,7 +19,7 @@ class BookListViewModelTests: XCTestCase {
         bookListViewModelWithError = BookListViewModel.init(repository: MockBookRepository(error: true))
     }
 
-    func testReturnNumberOfBooks() {
+    func testNumberOfBooks_With3Books_Returns3() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
             exp.fulfill()
@@ -29,7 +29,7 @@ class BookListViewModelTests: XCTestCase {
         XCTAssertEqual(3, bookListViewModel.numberOfBooks())
     }
 
-    func testBookAtIndexPath() {
+    func testBookAtIndexPath_With3Books_Returns2ndBook() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
             exp.fulfill()
@@ -39,7 +39,7 @@ class BookListViewModelTests: XCTestCase {
         XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)))
     }
 
-    func testBookIdAtIndexPath() {
+    func testBookIdAtIndexPath_With3Books_Returns2ndBookId() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
             exp.fulfill()
@@ -49,13 +49,13 @@ class BookListViewModelTests: XCTestCase {
         XCTAssertNotNil(bookListViewModel.bookId(at: IndexPath(item: 1, section: 0)))
     }
 
-    func testGetBooks() {
+    func testGetBooks_WithoutError_ReturnsNilError() {
         bookListViewModel.getBooks { (error) in
             XCTAssert(error == nil)
         }
     }
 
-    func testGetBooksWithError() {
+    func testGetBooks_WithError_ReturnsErrorNotNil() {
         bookListViewModelWithError.getBooks { (error) in
             XCTAssert(error != nil)
         }

@@ -44,16 +44,19 @@ class BookDetailViewModelTests: XCTestCase {
     
     func testGetBookName_WithoutError_ReturnsName() {
         getBook()
+        
         XCTAssertTrue(bookDetailViewModel.nameOfBook() == "Title")
     }
     
     func testGetCellTypesCount_With5Types_Returns5() {
         getBook()
+        
         XCTAssert(bookDetailViewModel.getCellTypesCount() == 5)
     }
     
     func testGetCellDetail_WithTitle_ReturnsTitle() {
         getBook()
+        
         XCTAssert(bookDetailViewModel.getCellDetail(for: IndexPath(row: 0, section: 0)) == "Title: Title")
     }
     
