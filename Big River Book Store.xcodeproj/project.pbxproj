@@ -189,8 +189,8 @@
 				9F4536FC2238E27700490AFB /* BookDetailViewModelTests.swift */,
 				9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */,
 				9F4536E42237CF3500490AFB /* BookViewModelTests.swift */,
-				9F45369F223656D400490AFB /* Info.plist */,
 				9F6CB47D22390797003A88A6 /* MockBookRepository.swift */,
+				9F45369F223656D400490AFB /* Info.plist */,
 			);
 			path = "Big River Book StoreTests";
 			sourceTree = "<group>";
