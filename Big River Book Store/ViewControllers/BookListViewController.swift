@@ -42,6 +42,7 @@ class BookListViewController: UIViewController {
 
     private func setup() {
         title = "BigRiver Bookstore"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         getBooks()
     }
 
@@ -52,7 +53,9 @@ class BookListViewController: UIViewController {
                 strongSelf.presentAlert(with: "Error", message: error!.localizedDescription)
                 return
             }
-            strongSelf.collectionView.reloadData()
+            DispatchQueue.main.async {
+                strongSelf.collectionView.reloadData()
+            }
         }
     }
 }
@@ -68,6 +71,14 @@ extension BookListViewController: UICollectionViewDelegate, UICollectionViewData
             cell.configure(with: bookViewModel)
         }
         return cell
+    }
+
+    func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let id = viewModel.bookId(at: indexPath) else { return }
+        let detailViewController = BookDetailViewController.getInstance()
+        let detailViewModel = BookDetailViewModel(with: id)
+        detailViewController.viewModel = detailViewModel
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

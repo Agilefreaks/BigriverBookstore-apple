@@ -10,11 +10,19 @@ import Foundation
 
 enum URLCreator {
     static let baseURL = "http://jsonapiplayground.reyesoft.com/v2"
-    static let authors = "/authors"
-    static let books = "/books"
-    static let photots = "/photos"
 
-    static func author(with id: String) -> String {
-        return authors + "/" + id
+    static func url(with path: URLPath, includeList: String, resourceID: String? = nil) -> URL? {
+        var components = URLComponents()
+        components.scheme = "http"
+        components.host = "jsonapiplayground.reyesoft.com"
+        components.path = path.rawValue + ((resourceID != nil) ? "/\(resourceID!)" : "")
+        components.queryItems = [URLQueryItem(name: "include", value: includeList)]
+        return components.url
     }
+}
+
+enum URLPath: String {
+    case books = "/v2/books"
+    case photos = "/v2/photos"
+    case authors = "/v2/authors"
 }

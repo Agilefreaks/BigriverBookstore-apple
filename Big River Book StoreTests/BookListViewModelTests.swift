@@ -13,13 +13,13 @@ class BookListViewModelTests: XCTestCase {
 
     var bookListViewModel: BookListViewModel!
     var bookListViewModelWithError: BookListViewModel!
-    
+
     override func setUp() {
         bookListViewModel = BookListViewModel.init(repository: MockBookRepository())
-        bookListViewModelWithError = BookListViewModel.init(repository: MockBookRepositoryWithError())
+        bookListViewModelWithError = BookListViewModel.init(repository: MockBookRepository(error: true))
     }
-    
-    func testReturnNumberOfBooks() {
+
+    func testNumberOfBooks_With3Books_Returns3() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
             exp.fulfill()
@@ -28,38 +28,36 @@ class BookListViewModelTests: XCTestCase {
         XCTAssert(result == .completed)
         XCTAssertEqual(3, bookListViewModel.numberOfBooks())
     }
-    
-    func testBookAtIndexPath() {
+
+    func testBookAtIndexPath_With3Books_Returns2ndBook() {
         let exp = expectation(description: "return books")
         bookListViewModel.getBooks { (error) in
             exp.fulfill()
         }
         let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
         XCTAssert(result == .completed)
-        XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)), "Book at index path")
+        XCTAssertNotNil(bookListViewModel.bookViewModel(at: IndexPath(item: 1, section: 0)))
     }
-    
-    func testGetBooks() {
+
+    func testBookIdAtIndexPath_With3Books_Returns2ndBookId() {
+        let exp = expectation(description: "return books")
+        bookListViewModel.getBooks { (error) in
+            exp.fulfill()
+        }
+        let result = XCTWaiter().wait(for: [exp], timeout: 5.0)
+        XCTAssert(result == .completed)
+        XCTAssertNotNil(bookListViewModel.bookId(at: IndexPath(item: 1, section: 0)))
+    }
+
+    func testGetBooks_WithoutError_ReturnsNilError() {
         bookListViewModel.getBooks { (error) in
             XCTAssert(error == nil)
         }
     }
-    
-    func testGetBooksWithError() {
+
+    func testGetBooks_WithError_ReturnsErrorNotNil() {
         bookListViewModelWithError.getBooks { (error) in
             XCTAssert(error != nil)
         }
-    }
-}
-
-class MockBookRepository: BookRepositoryProtocol {
-    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        block([Book(with: BookResource()), Book(with: BookResource()), Book(with: BookResource())], nil)
-    }
-}
-
-class MockBookRepositoryWithError: BookRepositoryProtocol {
-    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        block(nil, CustomError.generalError)
     }
 }

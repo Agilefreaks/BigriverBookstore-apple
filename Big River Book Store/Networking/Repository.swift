@@ -9,5 +9,6 @@
 import Foundation
 
 protocol BookRepositoryProtocol {
-    func getAll(completion block: @escaping ([Book]?, Error?) -> Void)
+    func getAll(include: [String], completion block: @escaping ([Book]?, Error?) -> Void)
+    func get(include: [String], resourceID: String, completion block: @escaping (BookDetail?, Error?) -> Void)
 }

@@ -9,19 +9,15 @@
 import Foundation
 
 struct Book {
-    var id: String
-    var title: String
-    var author: String
-    var imageUrl: String
+    let id: String
+    let title: String
+    let author: String
+    let imageUrls: [String]
 
-    init?(with bookResource: BookResource) {
-        guard let id = bookResource.id,
-            let title = bookResource.title else {
-            return nil
-        }
-        self.id = id
-        self.title = title
-        author = bookResource.author?.name ?? ""
-        imageUrl = bookResource.photos?.first?.uri ?? ""
+    static func from(_ bookResource: BookResource) -> Book {
+        return Book(id: bookResource.id,
+                    title: bookResource.title,
+                    author: bookResource.author?.name ?? "",
+                    imageUrls: bookResource.photos != nil ? bookResource.photos!.compactMap({ $0.uri }) : [])
     }
 }

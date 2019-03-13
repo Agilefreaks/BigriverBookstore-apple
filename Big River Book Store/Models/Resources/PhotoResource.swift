@@ -7,20 +7,11 @@
 //
 
 import Foundation
-import Vox
+import Japx
 
-class PhotoResource: Resource {
-    // MARK: - Attributes
-
-    @objc dynamic
-    var title: String?
-
-    @objc dynamic
-    var uri: String?
-
-    // MARK: - Resource type
-
-    override class var resourceType: String {
-        return "photos"
-    }
+struct PhotoResource: JapxCodable {
+    var type: String
+    var id: String
+    var title: String
+    var uri: String
 }

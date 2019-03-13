@@ -23,7 +23,8 @@ class BookListViewModel {
     // MARK: - Helpers
 
     func getBooks(completion block: @escaping (Error?) -> Void) {
-        repository.getAll { [weak self] books, error in
+        let includeArray = ["author", "photos", "stores"]
+        repository.getAll(include: includeArray) { [weak self] books, error in
             guard let strongSelf = self else {
                 block(CustomError.generalError)
                 return
@@ -44,5 +45,10 @@ class BookListViewModel {
     func bookViewModel(at indexPath: IndexPath) -> BookViewModel? {
         guard books.count > indexPath.item else { return nil }
         return BookViewModel(with: books[indexPath.row])
+    }
+
+    func bookId(at indexPath: IndexPath) -> String? {
+        guard books.count > indexPath.item else { return nil }
+        return books[indexPath.row].id
     }
 }
