@@ -44,6 +44,7 @@
 		9F4536F72237EDFA00490AFB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536F62237EDFA00490AFB /* UITableView+Extension.swift */; };
 		9F4536F92237EE4900490AFB /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536F82237EE4900490AFB /* UITableViewCell+Extension.swift */; };
 		9F4536FB2237F0AE00490AFB /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536FA2237F0AE00490AFB /* BookDetailViewModel.swift */; };
+		9F4536FD2238E27700490AFB /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4536FC2238E27700490AFB /* BookDetailViewModelTests.swift */; };
 		F2C6B44D3748755E68FE3957 /* Pods_Big_River_Book_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FA67D7DB6930AD2248F778 /* Pods_Big_River_Book_Store.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		9F4536F62237EDFA00490AFB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		9F4536F82237EE4900490AFB /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		9F4536FA2237F0AE00490AFB /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
+		9F4536FC2238E27700490AFB /* BookDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModelTests.swift; sourceTree = "<group>"; };
 		CBB6D8DE47B345B90FA93376 /* Pods-Big River Book Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big River Book Store.release.xcconfig"; path = "Pods/Target Support Files/Pods-Big River Book Store/Pods-Big River Book Store.release.xcconfig"; sourceTree = "<group>"; };
 		DCF2DD1CF9EC85BAA839C43E /* Pods-Big River Book StoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big River Book StoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Big River Book StoreTests/Pods-Big River Book StoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F424E891940CF41B6A0A33D8 /* Pods_Big_River_Book_StoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Big_River_Book_StoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 		9F45369C223656D400490AFB /* Big River Book StoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				9F4536FC2238E27700490AFB /* BookDetailViewModelTests.swift */,
 				9F4536D8223696DC00490AFB /* BookListViewModelTests.swift */,
 				9F4536E42237CF3500490AFB /* BookViewModelTests.swift */,
 				9F45369F223656D400490AFB /* Info.plist */,
@@ -465,7 +468,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Big River Book Store/Pods-Big River Book Store-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Vox/Vox.framework",
+				"${BUILT_PRODUCTS_DIR}/Japx/Japx.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -473,7 +476,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Japx.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -541,6 +544,7 @@
 			files = (
 				9F4536E52237CF3500490AFB /* BookViewModelTests.swift in Sources */,
 				9F4536D9223696DC00490AFB /* BookListViewModelTests.swift in Sources */,
+				9F4536FD2238E27700490AFB /* BookDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

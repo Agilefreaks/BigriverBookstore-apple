@@ -52,7 +52,9 @@ class BookListViewController: UIViewController {
                 strongSelf.presentAlert(with: "Error", message: error!.localizedDescription)
                 return
             }
-            strongSelf.collectionView.reloadData()
+            DispatchQueue.main.async {
+                strongSelf.collectionView.reloadData()
+            }
         }
     }
 }

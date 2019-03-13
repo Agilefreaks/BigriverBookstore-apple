@@ -14,13 +14,9 @@ struct Book {
     var author: String
     var imageUrls: [String]
 
-    init?(with bookResource: BookResource) {
-        guard let id = bookResource.id,
-            let title = bookResource.title else {
-            return nil
-        }
-        self.id = id
-        self.title = title
+    init(with bookResource: BookResource) {
+        id = bookResource.id
+        title = bookResource.title
         author = bookResource.author?.name ?? ""
         if let photos = bookResource.photos {
             imageUrls = photos.compactMap({ $0.uri })

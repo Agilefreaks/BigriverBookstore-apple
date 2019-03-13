@@ -7,39 +7,13 @@
 //
 
 import Foundation
-import Vox
+import Japx
 
-class StoreResource: Resource {
-    // MARK: - Attributes
-
-    @objc dynamic
-    var name: String?
-
-    @objc dynamic
-    var address: String?
-
-    @objc dynamic
-    var createdBy: NSNumber?
-
-    // MARK: - Relationships
-
-    @objc dynamic
-    var photos: PhotoResource?
-
-    @objc dynamic
-    var books: BookResource?
-
-    // MARK: - Resource type
-
-    override class var resourceType: String {
-        return "stores"
-    }
-
-    // MARK: - CodingKeys
-
-    override class var codingKeys: [String: String] {
-        return [
-            "created_by": "createdBy",
-        ]
-    }
+struct StoreResource: JapxCodable {
+    var type: String
+    var id: String
+    var name: String
+    var address: String
+    var photos: [PhotoResource]?
+    var books: [BookResource]?
 }

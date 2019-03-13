@@ -9,8 +9,9 @@
 import Foundation
 
 class BookRepository: BookRepositoryProtocol {
-    func getAll(completion block: @escaping ([Book]?, Error?) -> Void) {
-        SessionManager.getResources(type: BookResource.self, path: URLCreator.books, include: ["author", "photos"]) { resources, error in
+    func getAll(include: [String], completion block: @escaping ([Book]?, Error?) -> Void) {
+        let includeList = include.joined(separator: ",")
+        SessionManager.getResources(type: BookResource.self, path: .books, includeList: includeList) { resources, error in
             guard error == nil, let bookResources = resources else {
                 block(nil, error)
                 return
@@ -19,8 +20,9 @@ class BookRepository: BookRepositoryProtocol {
         }
     }
 
-    func get(with id: String, completion block: @escaping (Book?, Error?) -> Void) {
-        SessionManager.getResource(type: BookResource.self, path: URLCreator.books, id: id, include: ["author", "photos", "stores"]) { resource, error in
+    func get(include: [String], resourceID: String, completion block: @escaping (Book?, Error?) -> Void) {
+        let includeList = include.joined(separator: ",")
+        SessionManager.getResource(type: BookResource.self, path: .books, includeList: includeList, resourceID: resourceID) { resource, error in
             guard error == nil, let bookResource = resource else {
                 block(nil, error)
                 return

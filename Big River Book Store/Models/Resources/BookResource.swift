@@ -7,42 +7,26 @@
 //
 
 import Foundation
-import Vox
+import Japx
 
-class BookResource: Resource {
-    // MARK: - Attributes
-
-    @objc dynamic
-    var title: String?
-
-    @objc dynamic
-    var datePublished: String?
-
-    @objc dynamic
-    var isbn: NSNumber?
-
-    // MARK: - Relationships
-
-    @objc dynamic
+struct BookResource: JapxCodable {
+    var type: String
+    var id: String
+    var title: String
+    var datePublished: String
+    var isbn: Int
     var author: AuthorResource?
-
-    @objc dynamic
     var photos: [PhotoResource]?
-
-    @objc dynamic
     var stores: [StoreResource]?
 
-    // MARK: - Resource type
-
-    override class var resourceType: String {
-        return "books"
-    }
-
-    // MARK: - CodingKeys
-
-    override class var codingKeys: [String: String] {
-        return [
-            "date_published": "datePublished",
-        ]
+    enum CodingKeys: String, CodingKey {
+        case type
+        case id
+        case title
+        case datePublished = "date_published"
+        case isbn
+        case author
+        case photos
+        case stores
     }
 }

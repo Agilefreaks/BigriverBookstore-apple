@@ -23,7 +23,8 @@ class BookListViewModel {
     // MARK: - Helpers
 
     func getBooks(completion block: @escaping (Error?) -> Void) {
-        repository.getAll { [weak self] books, error in
+        let includeArray = ["author", "photos", "stores"]
+        repository.getAll(include: includeArray) { [weak self] books, error in
             guard let strongSelf = self else {
                 block(CustomError.generalError)
                 return

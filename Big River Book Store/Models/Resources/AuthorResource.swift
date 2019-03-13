@@ -7,25 +7,12 @@
 //
 
 import Foundation
-import Vox
+import Japx
 
-class AuthorResource: Resource {
-    // MARK: - Attributes
-
-    @objc dynamic
-    var name: String?
-
-    // MARK: - Relationships
-
-    @objc dynamic
-    var photos: [PhotoResource]?
-
-    @objc dynamic
+struct AuthorResource: JapxCodable {
+    var type: String
+    var id: String
+    var name: String
     var books: [BookResource]?
-
-    // MARK: - Resource type
-
-    override class var resourceType: String {
-        return "authors"
-    }
+    var photos: [PhotoResource]?
 }
