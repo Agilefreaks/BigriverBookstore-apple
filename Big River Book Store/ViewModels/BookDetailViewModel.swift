@@ -11,8 +11,8 @@ import Foundation
 class BookDetailViewModel {
     // MARK: - Variables
 
-    var book: Book?
-    var id: String = ""
+    private var book: Book?
+    private var id: String = ""
     private let repository: BookRepositoryProtocol
 
     // MARK: - Lifecycle

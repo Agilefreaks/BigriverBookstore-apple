@@ -61,25 +61,3 @@ class BookListViewModelTests: XCTestCase {
         }
     }
 }
-
-class MockBookRepository: BookRepositoryProtocol {
-    
-    var error: Bool!
-    
-    init(error: Bool = false) {
-        self.error = error
-    }
-    
-    func getAll(include: [String], completion block: @escaping ([Book]?, Error?) -> Void) {
-        guard !error else {
-            block(nil, CustomError.generalError)
-            return
-        }
-        let book = Book(id: "42", title: "Title", author: "author", imageUrls: [])
-        block([book, book, book], nil)
-    }
-    
-    func get(include: [String], resourceID: String, completion block: @escaping (Book?, Error?) -> Void) {
-        
-    }
-}
