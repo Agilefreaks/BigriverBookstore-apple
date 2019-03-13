@@ -25,7 +25,7 @@ class BookDetailViewModelTests: XCTestCase {
         XCTAssertTrue(numberOfPhotos == 0)
     }
     
-    func testPhotoAtIndexPath() {
+    func testPhotoAtIndexPath_With3Photos_ReturnsNotNil() {
         let exp = expectation(description: "return books")
         
         bookDetailViewModel.getBook { (error) in
